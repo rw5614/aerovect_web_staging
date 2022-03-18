@@ -60,20 +60,12 @@ const Footer: React.FC = () => {
             <div className="footerBottom">
                 <small>AeroVect Technologies Inc. &copy; 2020-2022</small>
                 <div className="social">
-                    <a href="2">
-                        <img src={instagramImg} alt="instagram" />
-                    </a>
-                    <a href="2">
-                        <img src={twitterImg} alt="twitter" />
-                    </a>
-                    <a href="2">
-                        <img src={youtubeImg} alt="youtube" />
-                    </a>
-                    <a href="2">
-                        <img src={linkedInImg} alt="linkedIn" />
-                    </a>
-                    <a href="2">
-                        <img src={facebookImg} alt="facebook" />
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.linkedin.com/company/aerovect/"
+                    >
+                        <img src={linkedInImg} alt="linkedin" />
                     </a>
                 </div>
             </div>

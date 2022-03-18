@@ -14,7 +14,16 @@ import iataImg from '../../assets/News/iata.png';
 import forbesImg from '../../assets/News/forbes.png';
 import readImg from '../../assets/News/read.png';
 
-import mediaKitImg from '../../assets/News/mediaKit.png';
+import mediaKit1 from '../../assets/News/mediaKit/1.jpg';
+import mediaKit2 from '../../assets/News/mediaKit/2.jpg';
+import mediaKit3 from '../../assets/News/mediaKit/3.jpg';
+import mediaKit4 from '../../assets/News/mediaKit/4.jpg';
+import mediaKit5 from '../../assets/News/mediaKit/5.jpg';
+import mediaKit6 from '../../assets/News/mediaKit/6.jpg';
+import mediaKit7 from '../../assets/News/mediaKit/7.jpg';
+import mediaKit8 from '../../assets/News/mediaKit/8.jpg';
+import mediaKit9 from '../../assets/News/mediaKit/9.jpg';
+
 import downloadImg from '../../assets/News/download.png';
 import { HeaderColorData, ViewProps } from '../../App';
 
@@ -23,8 +32,8 @@ const News: React.FC<ViewProps> = ({
 }) => {
     const [coverageActive, setCoverageActive] = useState(true);
 
-    const downloadImage = () => {
-        saveAs(mediaKitImg, 'image.jpg'); // Put your image url here.
+    const downloadImage = (url: string) => {
+        saveAs(url, `${url}.jpg`); // Put your image url here.
     };
 
     useEffect(() => {
@@ -36,7 +45,6 @@ const News: React.FC<ViewProps> = ({
 
         const section1 = document.getElementById('1')!;
         const section2 = document.getElementById('2')!;
-        const section3 = document.getElementById('3')!;
 
         const curScroll = document.documentElement.scrollTop;
         const top1 = section1.getBoundingClientRect().top;
@@ -110,71 +118,71 @@ const News: React.FC<ViewProps> = ({
                     <div className="mediaKit">
                         <div className="mediaRow">
                             <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
+                                <img className="mediaKitImg" src={mediaKit1} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit1)}>
                                     <img src={downloadImg} alt="download" />
                                 </div>
-                                <p>Short Description</p>
+                                {/* <p>Short Description</p> */}
                             </div>
                             <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
+                                <img className="mediaKitImg" src={mediaKit2} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit2)}>
                                     <img src={downloadImg} alt="download" />
                                 </div>
-                                <p>Short Description</p>
+                                {/* <p>Short Description</p> */}
                             </div>
                             <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
+                                <img className="mediaKitImg" src={mediaKit3} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit3)}>
                                     <img src={downloadImg} alt="download" />
                                 </div>
-                                <p>Short Description</p>
-                            </div>
-                        </div>
-                        <div className="mediaRow">
-                            <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
-                                    <img src={downloadImg} alt="download" />
-                                </div>
-                                <p>Short Description</p>
-                            </div>
-                            <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
-                                    <img src={downloadImg} alt="download" />
-                                </div>
-                                <p>Short Description</p>
-                            </div>
-                            <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
-                                    <img src={downloadImg} alt="download" />
-                                </div>
-                                <p>Short Description</p>
+                                {/* <p>Short Description</p> */}
                             </div>
                         </div>
                         <div className="mediaRow">
                             <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
+                                <img className="mediaKitImg" src={mediaKit4} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit4)}>
                                     <img src={downloadImg} alt="download" />
                                 </div>
-                                <p>Short Description</p>
+                                {/* <p>Short Description</p> */}
                             </div>
                             <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
+                                <img className="mediaKitImg" src={mediaKit5} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit5)}>
                                     <img src={downloadImg} alt="download" />
                                 </div>
-                                <p>Short Description</p>
+                                {/* <p>Short Description</p> */}
                             </div>
                             <div className="media">
-                                <img className="mediaKitImg" src={mediaKitImg} alt="media" />
-                                <div className="hoveredImg" aria-hidden onClick={downloadImage}>
+                                <img className="mediaKitImg" src={mediaKit6} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit6)}>
                                     <img src={downloadImg} alt="download" />
                                 </div>
-                                <p>Short Description</p>
+                                {/* <p>Short Description</p> */}
+                            </div>
+                        </div>
+                        <div className="mediaRow">
+                            <div className="media">
+                                <img className="mediaKitImg" src={mediaKit7} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit7)}>
+                                    <img src={downloadImg} alt="download" />
+                                </div>
+                                {/* <p>Short Description</p> */}
+                            </div>
+                            <div className="media">
+                                <img className="mediaKitImg" src={mediaKit8} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit8)}>
+                                    <img src={downloadImg} alt="download" />
+                                </div>
+                                {/* <p>Short Description</p> */}
+                            </div>
+                            <div className="media">
+                                <img className="mediaKitImg" src={mediaKit9} alt="media" />
+                                <div className="hoveredImg" aria-hidden onClick={() => downloadImage(mediaKit9)}>
+                                    <img src={downloadImg} alt="download" />
+                                </div>
+                                {/* <p>Short Description</p> */}
                             </div>
                         </div>
 

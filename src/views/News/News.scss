@@ -302,7 +302,10 @@
                     position: relative;
                     margin: 10px;
                     .mediaKitImg {
-                        width: 100%;
+                        width: 350px;
+                        height: 246px;
+                        object-fit: cover;
+                        border-radius: 16px;
                         // width: 250px;
                         // height: auto;
                     }
@@ -318,7 +321,7 @@
                         position: absolute;
                         top: 0;
                         right: 0;
-                        height: calc(100% - 16px - 16px);
+                        height: calc(100%);
                         width: 50%;
                         background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
                         opacity: 0;

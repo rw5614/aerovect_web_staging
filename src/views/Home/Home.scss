@@ -428,7 +428,7 @@
             }
             @media (min-width: $tablet-small) {
                 right: calc(131px * 0.1 + $page-padding-x-ts);
-                transform: scale(0.85);
+                transform: scale(0.75);
                 @media (max-height: 1000px) {
                     transform: scale(0.75);
                 }

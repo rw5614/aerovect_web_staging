@@ -12,6 +12,7 @@ import bannerImg from '../../assets/News/banner.jpg';
 import cnbcImg from '../../assets/News/cnbc.svg';
 import iataImg from '../../assets/News/iata.png';
 import forbesImg from '../../assets/News/forbes.png';
+import aviationProsImg from '../../assets/News/aviationPros.png';
 import readImg from '../../assets/News/read.png';
 
 import mediaKit1 from '../../assets/News/mediaKit/1.jpg';
@@ -80,6 +81,21 @@ const News: React.FC<ViewProps> = ({
                 </header>
                 {coverageActive && (
                     <div className="coverageList">
+                        <div className="coverage">
+                            <img src={aviationProsImg} alt="iata" />
+                            <div className="article">
+                                <h4>AeroVect and GAT Announce Industry-First Partnership to Deploy Autonomous Driving across US Airport Tarmacs</h4>
+                                <p>March 18, 2022</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.aviationpros.com/gse/gse-technology/press-release/21260685/aerovect-technologies-inc-aerovect-and-gat-announce-first-partnership-in-america-to-deploy-autonomous-driving-across-us-airport-tarmacs?fbclid=IwAR3rqR1NltCl-J_-YXc4oLpDupHFMpALFe5FH4bKFUkqtiKpw8VKkMagWVw"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
                         <div className="coverage">
                             <img src={iataImg} alt="iata" />
                             <div className="article">

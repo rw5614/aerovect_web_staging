@@ -310,26 +310,48 @@
         padding: 0 $page-padding-x-dl;
         height: calc(100vh + 350px);
         padding-top: 350px;
+        margin-top: 0;
         @media (min-width: $mobile) {
             height: initial;
             padding: 200px $page-padding-x-m;
             padding-top: 300px;
+            margin-top: 0;
         }
         @media (min-width: $tablet-small) {
             height: calc(100vh + 350px);
             padding: 0 $page-padding-x-ts;
+            margin-top: 0;
+            @media (max-height: 850px) {
+                margin-top: 200px;
+                height: 150vh;
+            }
         }
         @media (min-width: $tablet-large) {
             height: calc(100vh + 350px);
             padding: 0 $page-padding-x-tl;
+            margin-top: 0;
+            @media (max-height: 850px) {
+                margin-top: 200px;
+                height: 150vh;
+            }
         }
         @media (min-width: $desktop-small) {
             height: calc(100vh + 700px);
             padding: 0 $page-padding-x-ds;
+            margin-top: 0;
+            @media (max-height: 850px) {
+                margin-top: 200px;
+                height: 150vh;
+            }
         }
         @media (min-width: $desktop-large){
             height: calc(100vh + 800px);
             padding: 0 $page-padding-x-dl;
+            margin-top: 0;
+            @media (max-height: 850px) {
+                margin-top: 200px;
+                height: 150vh;
+            }
         }
         .airsideDescription {
             z-index: 1;

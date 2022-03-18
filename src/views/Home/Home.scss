@@ -249,31 +249,52 @@
             @media (min-width: $desktop-large){
                 bottom: calc(-658px);
             }
+            width: 1120px;
+            @media (min-width: $mobile) {
+                width: 400px;
+                height: 235px;
+            }
+            @media (min-width: $tablet-small) {
+                width: 700px;
+                height: 415px;
+            }
+            @media (min-width: $tablet-large) {
+                width: 800px;
+                height: 470px;
+            }
+            @media (min-width: $desktop-small) {
+                width: 1120px;
+                height: 658px;
+            }
+            @media (min-width: $desktop-large){
+                width: 1120px;
+                height: 658px;
+            }width: 1120px;
+            @media (min-width: $mobile) {
+                width: 400px;
+                height: 235px;
+            }
+            @media (min-width: $tablet-small) {
+                width: 700px;
+                height: 415px;
+            }
+            @media (min-width: $tablet-large) {
+                width: 800px;
+                height: 470px;
+            }
+            @media (min-width: $desktop-small) {
+                width: 1120px;
+                height: 658px;
+            }
+            @media (min-width: $desktop-large){
+                width: 1120px;
+                height: 658px;
+            }
 
             .floatingVideo {
                 border-radius: 32px;
                 z-index: 1;
-                width: 1120px;
-                @media (min-width: $mobile) {
-                    width: 400px;
-                    height: 235px;
-                }
-                @media (min-width: $tablet-small) {
-                    width: 700px;
-                    height: 415px;
-                }
-                @media (min-width: $tablet-large) {
-                    width: 800px;
-                    height: 470px;
-                }
-                @media (min-width: $desktop-small) {
-                    width: 1120px;
-                    height: 658px;
-                }
-                @media (min-width: $desktop-large){
-                    width: 1120px;
-                    height: 658px;
-                }
+                width: 100%;
             }
         }
         

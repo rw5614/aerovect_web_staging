@@ -73,7 +73,6 @@ const Company: React.FC<ViewProps> = ({
         }
         if (scrolled >= (2 - (300 / window.innerHeight))) {
             storyHeading.style.color = 'black';
-            console.log(123);
         } else {
             storyHeading.style.color = 'white';
         }

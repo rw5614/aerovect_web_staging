@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Parallax, useParallaxController } from 'react-scroll-parallax';
@@ -6,6 +7,10 @@ import roadAImg from '../../assets/Home/roadA.svg';
 import roadBImg from '../../assets/Home/roadB.svg';
 import tractorImg from '../../assets/Home/tractor.svg';
 import videoImg from '../../assets/Home/video.jpg';
+
+// @ts-ignore
+import video from '../../assets/Home/video.mp4';
+
 import './Home.scss';
 
 const Home: React.FC<ViewProps> = ({
@@ -85,7 +90,7 @@ const Home: React.FC<ViewProps> = ({
 
             <section className="ourMission" id="ourMission">
                 <Parallax
-                    translateY={['0px', '-331px']}
+                    translateY={[0, -50]}
                     opacity={[1, 0]}
                     className="ourMissionText"
                     startScroll={screenHeight}
@@ -106,7 +111,10 @@ const Home: React.FC<ViewProps> = ({
                     startScroll={screenHeight}
                     endScroll={screenHeight * 1.5}
                 >
-                    <img id="floatingVideo" className="floatingVideo" src={videoImg} alt="video" onLoad={handleLoad} />
+                    {/* <img id="floatingVideo" className="floatingVideo" src={videoImg} alt="video" onLoad={handleLoad} /> */}
+                    <video id="floatingVideo" className="floatingVideo" playsInline autoPlay muted loop>
+                        <source src={video} type="video/mp4" />
+                    </video>
                 </Parallax>
             </section>
 

@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/aerovect_web_staging/static/css/main.7805145c.chunk.css",
-    "main.js": "/aerovect_web_staging/static/js/main.b6e0784a.chunk.js",
-    "main.js.map": "/aerovect_web_staging/static/js/main.b6e0784a.chunk.js.map",
+    "main.css": "/aerovect_web_staging/static/css/main.110085fd.chunk.css",
+    "main.js": "/aerovect_web_staging/static/js/main.b07fbd03.chunk.js",
+    "main.js.map": "/aerovect_web_staging/static/js/main.b07fbd03.chunk.js.map",
     "runtime-main.js": "/aerovect_web_staging/static/js/runtime-main.52428e38.js",
     "runtime-main.js.map": "/aerovect_web_staging/static/js/runtime-main.52428e38.js.map",
     "static/js/2.cb31948c.chunk.js": "/aerovect_web_staging/static/js/2.cb31948c.chunk.js",
     "static/js/2.cb31948c.chunk.js.map": "/aerovect_web_staging/static/js/2.cb31948c.chunk.js.map",
     "index.html": "/aerovect_web_staging/index.html",
-    "static/css/main.7805145c.chunk.css.map": "/aerovect_web_staging/static/css/main.7805145c.chunk.css.map",
+    "static/css/main.110085fd.chunk.css.map": "/aerovect_web_staging/static/css/main.110085fd.chunk.css.map",
     "static/js/2.cb31948c.chunk.js.LICENSE.txt": "/aerovect_web_staging/static/js/2.cb31948c.chunk.js.LICENSE.txt",
     "static/media/1.d5752542.jpg": "/aerovect_web_staging/static/media/1.d5752542.jpg",
     "static/media/2.01b1d672.jpg": "/aerovect_web_staging/static/media/2.01b1d672.jpg",
@@ -29,9 +29,8 @@
     "static/media/arrowDown.fa8a7296.svg": "/aerovect_web_staging/static/media/arrowDown.fa8a7296.svg",
     "static/media/Technology.scss": "/aerovect_web_staging/static/media/circle.9fba390a.svg",
     "static/media/Contact.scss": "/aerovect_web_staging/static/media/background.ed4acb5d.jpg",
-    "static/media/Careers.scss": "/aerovect_web_staging/static/media/backgroundLogo.29c94358.svg",
+    "static/media/Careers.scss": "/aerovect_web_staging/static/media/banner.99f9b8d8.jpg",
     "static/media/banner.4867bff8.jpg": "/aerovect_web_staging/static/media/banner.4867bff8.jpg",
-    "static/media/banner.99f9b8d8.jpg": "/aerovect_web_staging/static/media/banner.99f9b8d8.jpg",
     "static/media/company.4e3a3257.png": "/aerovect_web_staging/static/media/company.4e3a3257.png",
     "static/media/email.705fef74.svg": "/aerovect_web_staging/static/media/email.705fef74.svg",
     "static/media/forbes.40137435.png": "/aerovect_web_staging/static/media/forbes.40137435.png",
@@ -62,7 +61,7 @@
   "entrypoints": [
     "static/js/runtime-main.52428e38.js",
     "static/js/2.cb31948c.chunk.js",
-    "static/css/main.7805145c.chunk.css",
-    "static/js/main.b6e0784a.chunk.js"
+    "static/css/main.110085fd.chunk.css",
+    "static/js/main.b07fbd03.chunk.js"
   ]
 }

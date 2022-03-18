@@ -1,0 +1,5 @@
+/dist/**
+node_modules/
+**/*.test.{js,jsx,ts,tsx}
+src/App.test.tsx
+src/serviceWorker.ts

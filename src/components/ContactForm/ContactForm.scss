@@ -1,0 +1,75 @@
+@import '../../global.scss';
+
+.contactFormContainer {
+    padding: 100px 40px;
+    width: initial;
+    @media (min-width: $mobile) {
+        padding: 50px 20px;
+        width: 100%;
+    }
+    @media (min-width: $tablet-small) {
+        padding: 100px 40px;
+        width: 700px;
+    }
+    @media (min-width: $tablet-large) {
+        padding: 100px 40px;
+        width: 700px;
+    }
+    @media (min-width: $desktop-small) {
+        padding: 100px 40px;
+        width: 700px;
+    }
+    @media (min-width: $desktop-large){
+        padding: 100px 40px;
+        width: 700px;
+    }
+    border: 0.5px solid #969696;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    input {
+        width: 100%;
+        margin-bottom: 48px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #CACACA;
+        padding: 8px 0;
+    }
+    input::placeholder {
+        color: black;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+    }
+    .submitWrapper {
+        position: relative;
+        button {
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            padding: 12px;
+            background: #0175FF;
+            color: white;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+}
+
+.darkMode {
+    background: #353535;
+    border: none;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.45);
+    input {
+        border-bottom: 1px solid #535353;
+        background-color: transparent;
+        color: white;
+    }
+    input::placeholder {
+        color: white;
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../global.scss';
+
+.contactContainer {
+    header {
+        padding: 0 $page-padding-x-dl;
+        height: 100vh;
+        background: url('../../assets/Contact/background.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        flex-direction: row;
+        @media (min-width: $mobile) {
+            padding: 0 $page-padding-x-m;
+            flex-direction: column;
+        }
+        @media (min-width: $tablet-small) {
+            padding: 0 $page-padding-x-ts;
+            flex-direction: row;
+        }
+        @media (min-width: $tablet-large) {
+            padding: 0 $page-padding-x-tl;
+            flex-direction: row;
+        }
+        @media (min-width: $desktop-small) {
+            padding: 0 $page-padding-x-ds;
+            flex-direction: row;
+        }
+        @media (min-width: $desktop-large){
+            padding: 0 $page-padding-x-dl;
+            flex-direction: row;
+        }
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 56px;
+            margin-right: 135px;
+            margin-bottom: 0;
+            @media (min-width: $mobile) {
+                margin-bottom: 50px;
+                margin-right: 0;
+                font-size: 26px;
+            }
+            @media (min-width: $tablet-small) {
+                margin-bottom: 0;
+                margin-right: 135px;
+                font-size: 36px;
+            }
+            @media (min-width: $tablet-large) {
+                margin-bottom: 0;
+                margin-right: 135px;
+                font-size: 48px;
+            }
+            @media (min-width: $desktop-small) {
+                margin-bottom: 0;
+                margin-right: 135px;
+                font-size: 56px;
+            }
+            @media (min-width: $desktop-large){
+                margin-bottom: 0;
+                margin-right: 135px;
+                font-size: 56px;
+            }
+        }
+    }
+}

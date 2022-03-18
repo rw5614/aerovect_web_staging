@@ -1,0 +1,479 @@
+@import '../../global.scss';
+
+.homeContainer {
+    width: 100%;
+    // height: 100vh;
+    background-color: white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .getInTouch {
+        position: fixed;
+        left: -100px;
+        top: 50%;
+        transform: translateY(-50%);
+        transform: rotate(-90deg);
+        z-index: 1;
+        animation: getInTouchFade 1s forwards;
+        animation-delay: 4s;
+        p {
+            text-transform: uppercase;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+        }
+        display: block;
+        @media (min-width: $mobile) {
+            display: none;
+        }
+    }
+    .heroContainer {
+        height: 100vh;
+        background-image: url('../../assets/Home/hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        mask-image: url('../../assets/Home/intro.svg');
+        mask-repeat: no-repeat;
+        mask-position: 50%;
+        animation: introZoom 2s forwards;
+        animation-timing-function: cubic-bezier(1, 0, 0.6, 1.0);
+        // animation-timing-function: ease-in-out;
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        background-position: 10% 30%;
+        padding: 0 $page-padding-x-dl;
+        @media (min-width: $mobile) {
+            background-position: 45% 65%;
+            padding: 0 $page-padding-x-m;
+            justify-content: flex-end;
+        }
+        @media (min-width: $tablet-small) {
+            background-position: 40% 30%;
+            padding: 0 $page-padding-x-ts;
+            justify-content: center;
+        }
+        @media (min-width: $tablet-large) {
+            background-position: 30% 30%;
+            padding: 0 $page-padding-x-tl;
+            justify-content: center;
+        }
+        @media (min-width: $desktop-small) {
+            background-position: 20% 30%;
+            padding: 0 $page-padding-x-ds;
+            justify-content: center;
+        }
+        @media (min-width: $desktop-large){
+            background-position: 10% 30%;
+            padding: 0 $page-padding-x-dl;
+            justify-content: center;
+        }
+
+        h1 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 56px;
+            @media (min-width: $mobile) {
+                font-size: 24px;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 40px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 56px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 56px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 56px;
+            }
+            margin: 0;
+            padding: 0;
+            margin-bottom: 24px;
+            position: relative;
+            bottom: -150px;
+            opacity: 0;
+
+            animation: introHeadingFade 1s forwards, fadeIn 1s forwards;
+            animation-delay: 2s, 2.25s;
+        }
+        h2 {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            padding-bottom: 0px;
+            @media (min-width: $mobile) {
+                font-size: 16px;
+                padding-bottom: 100px;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 18px;
+                padding-bottom: 0px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 24px;
+                padding-bottom: 0px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 24px;
+                padding-bottom: 0px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 24px;
+                padding-bottom: 0px;
+            }
+            margin: 0;
+            padding: 0;
+            margin-top: 24px;
+            position: relative;
+            top: -85px;
+            opacity: 0;
+
+            animation: introSubheadingFade 1s forwards, fadeIn 1s forwards;
+            animation-delay: 2s, 2.25s;
+        }
+    }
+    .ourMission {
+        height: 100vh;
+        background-image: url('../../assets/Home/airport.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        padding: 0 $page-padding-x-dl;
+        @media (min-width: $mobile) {
+            padding: 0 $page-padding-x-m;
+        }
+        @media (min-width: $tablet-small) {
+            padding: 0 $page-padding-x-ts;
+        }
+        @media (min-width: $tablet-large) {
+            padding: 0 $page-padding-x-tl;
+        }
+        @media (min-width: $desktop-small) {
+            padding: 0 $page-padding-x-ds;
+        }
+        @media (min-width: $desktop-large){
+            padding: 0 $page-padding-x-dl;
+        }
+        button {
+            width: 150px;
+            height: 50px;
+            background: $aerovect-blue;
+            outline: none;
+            border: none;
+            color: white;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .ourMissionText {
+            width: 100%;
+            h2 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 64px;
+                margin-bottom: 44px;
+                @media (min-width: $mobile) {
+                    font-size: 24px;
+                }
+                @media (min-width: $tablet-small) {
+                    font-size: 32px;
+                }
+                @media (min-width: $tablet-large) {
+                    font-size: 48px;
+                }
+                @media (min-width: $desktop-small) {
+                    font-size: 64px;
+                }
+                @media (min-width: $desktop-large){
+                    font-size: 64px;
+                }
+            }
+            p {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 150%;
+                width: 620px;
+                letter-spacing: -0.015em;
+                @media (min-width: $mobile) {
+                    font-size: 16px;
+                    width: initial;
+                }
+                @media (min-width: $tablet-small) {
+                    font-size: 18px;
+                    width: 480px;
+                }
+                @media (min-width: $tablet-large) {
+                    font-size: 20px;
+                    width: 620px;
+                }
+                @media (min-width: $desktop-small) {
+                    font-size: 24px;
+                    width: 620px;
+                }
+                @media (min-width: $desktop-large){
+                    font-size: 24px;
+                    width: 620px;
+                }
+            }
+        }
+        .floatingVideoContainer {
+            position: absolute;
+            bottom: calc(-658px);
+            z-index: 8;
+            @media (min-width: $mobile) {
+                bottom: calc(-235px);
+            }
+            @media (min-width: $tablet-small) {
+                bottom: calc(-415px);
+            }
+            @media (min-width: $tablet-large) {
+                bottom: calc(-470px);
+            }
+            @media (min-width: $desktop-small) {
+                bottom: calc(-658px);
+            }
+            @media (min-width: $desktop-large){
+                bottom: calc(-658px);
+            }
+
+            .floatingVideo {
+                border-radius: 32px;
+                z-index: 1;
+                width: 1120px;
+                @media (min-width: $mobile) {
+                    width: 400px;
+                    height: 235px;
+                }
+                @media (min-width: $tablet-small) {
+                    width: 700px;
+                    height: 415px;
+                }
+                @media (min-width: $tablet-large) {
+                    width: 800px;
+                    height: 470px;
+                }
+                @media (min-width: $desktop-small) {
+                    width: 1120px;
+                    height: 658px;
+                }
+                @media (min-width: $desktop-large){
+                    width: 1120px;
+                    height: 658px;
+                }
+            }
+        }
+        
+    }
+
+    .airsideDriver {
+        padding-top: 350px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        padding: 0 $page-padding-x-dl;
+        height: calc(100vh + 350px);
+        padding-top: 350px;
+        @media (min-width: $mobile) {
+            height: initial;
+            padding: 200px $page-padding-x-m;
+            padding-top: 300px;
+        }
+        @media (min-width: $tablet-small) {
+            height: calc(100vh + 350px);
+            padding: 0 $page-padding-x-ts;
+        }
+        @media (min-width: $tablet-large) {
+            height: calc(100vh + 350px);
+            padding: 0 $page-padding-x-tl;
+        }
+        @media (min-width: $desktop-small) {
+            height: calc(100vh + 700px);
+            padding: 0 $page-padding-x-ds;
+        }
+        @media (min-width: $desktop-large){
+            height: calc(100vh + 800px);
+            padding: 0 $page-padding-x-dl;
+        }
+        .airsideDescription {
+            z-index: 1;
+            h2 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 96px;
+                line-height: 140%;
+                letter-spacing: -0.015em;
+                margin-bottom: 122px;
+                @media (min-width: $mobile) {
+                    margin-bottom: 38px;
+                    font-size: 28px;
+                }
+                @media (min-width: $tablet-small) {
+                    margin-bottom: 60px;
+                    font-size: 32px;
+                }
+                @media (min-width: $tablet-large) {
+                    margin-bottom: 80px;
+                    font-size: 48px;
+                }
+                @media (min-width: $desktop-small) {
+                    margin-bottom: 100px;
+                    font-size: 78px;
+                }
+                @media (min-width: $desktop-large){
+                    margin-bottom: 122px;
+                    font-size: 96px;
+                }
+            }
+            h3 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 48px;
+                line-height: 140%;
+                letter-spacing: -0.015em;
+                margin-bottom: 32px;
+                width: 100%;
+                @media (min-width: $mobile) {
+                    font-size: 16px;
+                    width: 60%;
+                }
+                @media (min-width: $tablet-small) {
+                    font-size: 24px;
+                    width: 100%;
+                }
+                @media (min-width: $tablet-large) {
+                    font-size: 36px;
+                    width: 100%;
+                }
+                @media (min-width: $desktop-small) {
+                    font-size: 40px;
+                    width: 100%;
+                }
+                @media (min-width: $desktop-large){
+                    font-size: 48px;
+                    width: 100%;
+                }
+            }
+            p {
+                font-style: normal;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.015em;
+                margin-bottom: 48px;
+                width: 100%;
+                @media (min-width: $mobile) {
+                    font-size: 16px;
+                    width: 60%;
+                }
+                @media (min-width: $tablet-small) {
+                    font-size: 24px;
+                    width: 60%;
+                }
+                @media (min-width: $tablet-large) {
+                    font-size: 36px;
+                    width: 60%;
+                }
+                @media (min-width: $desktop-small) {
+                    font-size: 40px;
+                    width: 60%;
+                }
+                @media (min-width: $desktop-large){
+                    font-size: 48px;
+                    width: 60%;
+                }
+            }
+            button {
+                background: $aerovect-blue;
+                color: white;
+                width: 150px;
+                height: 48px;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 150%;
+                letter-spacing: -0.015em;
+            }
+        }
+
+        .road {
+            position: absolute;
+            display: flex;
+            align-items: flex-start;
+            transform-origin: bottom right;
+            bottom: 0;
+            right: calc(131px * 0.7 + $page-padding-x-dl);
+            transform: scale(0.7);
+            @media (min-width: $mobile) {
+                right: calc(131px * 0.3 + $page-padding-x-m);
+                transform: scale(.45);
+            }
+            @media (min-width: $tablet-small) {
+                right: calc(131px * 0.1 + $page-padding-x-ts);
+                transform: scale(0.85);
+                @media (max-height: 1000px) {
+                    transform: scale(0.75);
+                }
+                @media (max-height: 800px) {
+                    transform: scale(0.6);
+                }
+            }
+            @media (min-width: $tablet-large) {
+                right: calc(131px * 1 + $page-padding-x-tl);
+                transform: scale(.85);
+                @media (max-height: 1000px) {
+                    transform: scale(0.75);
+                }
+                @media (max-height: 800px) {
+                    transform: scale(0.70);
+                }
+            }
+            @media (min-width: $desktop-small) {
+                right: calc(131px * 0.7 + $page-padding-x-ds);
+                transform: scale(.9);
+                @media (max-height: 1000px) {
+                    transform: scale(0.85);
+                }
+            }
+            @media (min-width: $desktop-large){
+                right: calc(131px * 0.7 + $page-padding-x-dl);
+                transform: scale(1.1);
+                @media (max-height: 1000px) {
+                    transform: scale(0.9);
+                }
+            }
+
+            .roadLeft {
+                position: relative;
+                bottom: 0;
+                .tractor {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+            .rightRoad {
+                position: absolute;
+                right: -130px;
+            }
+        }
+    }
+}

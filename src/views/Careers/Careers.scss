@@ -1,0 +1,586 @@
+@import '../../global.scss';
+
+.careersContainer {
+
+    header {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: url('../../assets/Careers/backgroundLogo.svg');
+        background-repeat: no-repeat;
+        background-position: 100% 50%;
+        background-size: 100%;
+        // backgorund-
+        padding: 0 $page-padding-x-dl;
+        @media (min-width: $mobile) {
+            padding: 0 $page-padding-x-m;
+        }
+        @media (min-width: $tablet-small) {
+            padding: 0 $page-padding-x-ts;
+        }
+        @media (min-width: $tablet-large) {
+            padding: 0 $page-padding-x-tl;
+        }
+        @media (min-width: $desktop-small) {
+            padding: 0 $page-padding-x-ds;
+        }
+        @media (min-width: $desktop-large){
+            padding: 0 $page-padding-x-dl;
+        }
+        h1, h2 {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 80px;
+            line-height: 140%;
+            /* or 112px */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.015em;
+
+            @media (min-width: $mobile) {
+                font-size: 44px;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 60px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 70px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 80px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 80px;
+            }
+        }
+        p {
+            margin-top: 40px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 150%;
+            /* or 36px */
+
+            display: flex;
+            align-items: center;
+            letter-spacing: -0.015em;
+
+            @media (min-width: $mobile) {
+                font-size: 16px;
+                width: initial;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 24px;
+                width: 620px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 24px;
+                width: 620px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 24px;
+                width: 620px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 24px;
+                width: 620px;
+            }
+        }
+
+        .headerP {
+            display: block;
+            @media (min-width: $mobile) {
+                font-size: 16px;
+                display: none;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 24px;
+                display: block;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 24px;
+                display: block;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 24px;
+                display: block;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 24px;
+                display: block;
+            }
+        }
+    }
+
+    .mobileDesc {
+        display: none;
+        @media (min-width: $mobile) {
+            display: flex;
+        }
+        @media (min-width: $tablet-small) {
+            display: none;
+        }
+        @media (min-width: $tablet-large) {
+            display: none;
+        }
+        @media (min-width: $desktop-small) {
+            display: none;
+        }
+        @media (min-width: $desktop-large){
+            display: none;
+        }
+        justify-content:center;
+        align-items:center;
+    }
+
+    .benefitsSection {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        flex-direction: row;
+        @media (min-width: $mobile) {
+            height: initial;
+            flex-direction: column;
+        }
+        @media (min-width: $tablet-small) {
+            height: initial;
+            flex-direction: column;
+        }
+        @media (min-width: $tablet-large) {
+            height: 100vh;
+            flex-direction: row;
+        }
+        @media (min-width: $desktop-small) {
+            height: 100vh;
+            flex-direction: row;
+        }
+        @media (min-width: $desktop-large){
+            height: 100vh;
+            flex-direction: row;
+        }
+        .groupedImg {
+            width: 30%;
+            @media (min-width: $mobile) {
+                width: 100%;
+            }
+            @media (min-width: $tablet-small) {
+                width: 100%;
+            }
+            @media (min-width: $tablet-large) {
+                width: 30%;
+            }
+            @media (min-width: $desktop-small) {
+                width: 30%;
+            }
+            @media (min-width: $desktop-large){
+                width: 30%;
+            }
+            position: relative;
+ 
+            .gradientImg {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                display: block;
+                @media (min-width: $mobile) {
+                    display: none;
+                }
+                @media (min-width: $tablet-small) {
+                    display: none;
+                }
+                @media (min-width: $tablet-large) {
+                    display: block;
+                }
+                @media (min-width: $desktop-small) {
+                    display: block;
+                }
+                @media (min-width: $desktop-large){
+                    display: block;
+                }
+            }
+            .circleImgWrapper {
+                margin: 0;
+                text-align: initial;
+                @media (min-width: $mobile) {
+                    text-align: center;
+                    margin: 100px 0;
+                }
+                @media (min-width: $tablet-small) {
+                    text-align: center;
+                    margin: 100px 0;
+                }
+                @media (min-width: $tablet-large) {
+                    text-align: initial;
+                    margin: 0;
+                }
+                @media (min-width: $desktop-small) {
+                    text-align: initial;
+                    margin: 0;
+                }
+                @media (min-width: $desktop-large){
+                    text-align: initial;
+                    margin: 0;
+                }
+                .circleImg {
+                    border-radius: 50%;
+                    top: 0;
+                    right: 0;
+
+                    height: 500px;
+                    width: initial;
+                    position: absolute;
+                    transform: translateX(50%);
+                    @media (min-width: $mobile) {
+                        height: initial;
+                        width: calc(100% - #{$page-padding-x-m * 2});
+                        position: relative;
+                        transform: translateX(0);
+                    }
+                    @media (min-width: $tablet-small) {
+                        height: initial;
+                        width: calc(100% - #{$page-padding-x-ts * 2});
+                        position: relative;
+                        transform: translateX(0);
+                    }
+                    @media (min-width: $tablet-large) {
+                        height: 500px;
+                        width: initial;
+                        position: absolute;
+                        transform: translateX(50%);
+                    }
+                    @media (min-width: $desktop-small) {
+                        height: 500px;
+                        width: initial;
+                        position: absolute;
+                        transform: translateX(50%);
+                    }
+                    @media (min-width: $desktop-large){
+                        height: 500px;
+                        width: initial;
+                        position: absolute;
+                        transform: translateX(50%);
+                    }
+
+                }
+            }
+        }
+        .benefits {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            padding: 0 $page-padding-x-dl;
+            margin-top: 0;
+            @media (min-width: $mobile) {
+                width: 100%;
+                margin-top: 24px;
+                padding: 0 $page-padding-x-m;
+            }
+            @media (min-width: $tablet-small) {
+                width: 100%;
+                margin-top: 24px;
+                padding: 0 $page-padding-x-ts;
+            }
+            @media (min-width: $tablet-large) {
+                width: 50%;
+                margin-top: 0;
+                padding: 0 $page-padding-x-tl;
+                padding-left: 0;
+            }
+            @media (min-width: $desktop-small) {
+                width: 50%;
+                margin-top: 0;
+                padding: 0 $page-padding-x-ds;
+                padding-left: 0;
+            }
+            @media (min-width: $desktop-large){
+                width: 50%;
+                margin-top: 0;
+                padding: 0 $page-padding-x-dl;
+                padding-left: 0;
+            }
+            h3 {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 48px;
+                margin-bottom: 50px;
+
+                @media (min-width: $mobile) {
+                    font-size: 26px;
+                }
+                @media (min-width: $tablet-small) {
+                    font-size: 30px;
+                }
+                @media (min-width: $tablet-large) {
+                    font-size: 36px;
+                }
+                @media (min-width: $desktop-small) {
+                    font-size: 48px;
+                }
+                @media (min-width: $desktop-large){
+                    font-size: 48px;
+                }
+            }
+            .benefitsList {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                @media (min-width: $mobile) {
+                    flex-direction: column;
+                }
+                @media (min-width: $tablet-small) {
+                    flex-direction: row;
+                }
+                @media (min-width: $tablet-large) {
+                    flex-direction: row;
+                }
+                @media (min-width: $desktop-small) {
+                    flex-direction: row;
+                }
+                @media (min-width: $desktop-large){
+                    flex-direction: row;
+                }
+                .benefitsCol:not(:last-child) {
+                    margin-right: 21px;
+                    @media (min-width: $mobile) {
+                        margin-right: 0;
+                    }
+                    @media (min-width: $tablet-small) {
+                        margin-right: 21px;
+                    }
+                    @media (min-width: $tablet-large) {
+                        margin-right: 21px;
+                    }
+                    @media (min-width: $desktop-small) {
+                        margin-right: 21px;
+                    }
+                    @media (min-width: $desktop-large){
+                        margin-right: 21px;
+                    }
+                }
+                .benefitsCol {
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    .benefit {
+                        display: flex;
+                        align-items: center;
+                        padding: 22px 0;
+                        border-bottom: 0.5px solid #CDCDCD;
+                        .imgWrapper {
+                            width:24px;
+                            height: 24px;
+                            margin-right: 18px;
+                            display: flex;
+                            justify-self: center;
+                            align-items: center;
+                            img {
+                                
+                                height: 24px;
+                                width: 24px;
+                            }
+                        }
+                        p {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .rolesSection {
+        width: 100%;
+        padding: 0 $page-padding-x-dl;
+        @media (min-width: $mobile) {
+            padding: 150px $page-padding-x-m;
+        }
+        @media (min-width: $tablet-small) {
+            padding: 150px $page-padding-x-ts;
+        }
+        @media (min-width: $tablet-large) {
+            padding: 0 $page-padding-x-tl;
+        }
+        @media (min-width: $desktop-small) {
+            padding: 0 $page-padding-x-ds;
+        }
+        @media (min-width: $desktop-large){
+            padding: 0 $page-padding-x-dl;
+        }
+        h3 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 48px;
+            width: 100%;
+            border-bottom: 2px solid $grey;
+            padding-bottom: 50px;
+
+            @media (min-width: $mobile) {
+                font-size: 26px;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 30px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 36px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 48px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 48px;
+            }
+        }
+        .rolesContainer {
+            margin-top: 50px;
+            .role {
+                padding-top: 32px;
+                padding-bottom: 16px;
+                border-bottom: 1px solid #D6D6D6;
+                display: flex;
+                justify-content: space-between;
+                .roleDesc {
+                    h4 {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 24px;
+                        margin-bottom: 6px;
+                        @media (min-width: $mobile) {
+                            font-size: 16px;
+                        }
+                        @media (min-width: $tablet-small) {
+                            font-size: 20px;
+                        }
+                        @media (min-width: $tablet-large) {
+                            font-size: 24px;
+                        }
+                        @media (min-width: $desktop-small) {
+                            font-size: 24px;
+                        }
+                        @media (min-width: $desktop-large){
+                            font-size: 24px;
+                        }
+                    }
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        margin-bottom: 6px;
+                        @media (min-width: $mobile) {
+                            font-size: 12px;
+                        }
+                        @media (min-width: $tablet-small) {
+                            font-size: 14px;
+                        }
+                        @media (min-width: $tablet-large) {
+                            font-size: 16px;
+                        }
+                        @media (min-width: $desktop-small) {
+                            font-size: 16px;
+                        }
+                        @media (min-width: $desktop-large){
+                            font-size: 16px;
+                        }
+                        color: #5A5A5A;
+                    }
+                }
+                .apply {
+                    a{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-decoration: none;
+                        color: black;
+                        p {
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 21px;
+                            margin-right: 7px;
+                            @media (min-width: $mobile) {
+                                font-size: 16px;
+                            }
+                            @media (min-width: $tablet-small) {
+                                font-size: 18px;
+                            }
+                            @media (min-width: $tablet-large) {
+                                font-size: 21px;
+                            }
+                            @media (min-width: $desktop-small) {
+                                font-size: 21px;
+                            }
+                            @media (min-width: $desktop-large){
+                                font-size: 21px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding: 0 0;
+        @media (min-width: $mobile) {
+            padding: 100px $page-padding-x-m;
+            height: initial;
+        }
+        @media (min-width: $tablet-small) {
+            padding: 0 0;
+            height: 100vh;
+        }
+        @media (min-width: $tablet-large) {
+            padding: 0 0;
+            height: 100vh;
+        }
+        @media (min-width: $desktop-small) {
+            padding: 0 0;
+            height: 100vh;
+        }
+        @media (min-width: $desktop-large){
+            padding: 0 0;
+            height: 100vh;
+        }
+        h1, h2 {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 140%;
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            @media (min-width: $mobile) {
+                font-size: 24px;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 36px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 48px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 56px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 56px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 80px;
+        }
+    }
+}

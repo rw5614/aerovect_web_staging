@@ -1,0 +1,325 @@
+@import '../../global.scss';
+
+.companyContainer {
+    width: 100vw;
+    overflow-x: hidden;
+    header, .background {
+        position: fixed; 
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 $page-padding-x-dl;
+        @media (min-width: $mobile) {
+            padding: 0 $page-padding-x-m;
+        }
+        @media (min-width: $tablet-small) {
+            padding: 0 $page-padding-x-ts;
+        }
+        @media (min-width: $tablet-large) {
+            padding: 0 $page-padding-x-tl;
+        }
+        @media (min-width: $desktop-small) {
+            padding: 0 $page-padding-x-ds;
+        }
+        @media (min-width: $desktop-large){
+            padding: 0 $page-padding-x-dl;
+        }
+        h1 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 96px;
+            line-height: 140%;
+            color: black;
+            transition: opacity 0.25s;
+            @media (min-width: $mobile) {
+                font-size: 38px;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 50px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 80px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 96px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 96px;
+            }
+        }
+    }
+
+    header {
+        background: white;
+        z-index: 1;
+    }
+
+    #storyHeading {
+        z-index: 99;
+    }
+
+    .background {
+        z-index: 3;
+        background-color: $aerovect-blue;
+        h1 {
+            color: white;
+        }
+
+        mask-image: url('../../assets/Technology/circle.svg');
+        mask-repeat: no-repeat;
+        mask-position: 50%;
+        mask-size: 150%;
+    }
+    .fullScreen {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .halfScreen {
+        height: 50vh;
+    }
+
+    #timelineDot {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        background-color: #C4C4C4;
+        border-radius: 50%;
+        top: 50%;
+        z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.25s;
+    }
+
+    // #timeline::after {
+    //     content: '';
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 20px;
+    //     width: 2px;
+    //     left: calc((20px - 2px) / 2);
+    //     // height: calc(50vh - 96px - 150px);
+    //     height: 50vh;
+    //     background-color: #C4C4C4;
+    // }
+
+    #timelineLine {
+        position: absolute;
+        top: 20px;
+        width: 2px;
+        left: calc((20px - 2px) / 2);
+        // height: calc(50vh - 96px - 150px);
+        height: 100vh;
+        background-color: #C4C4C4;
+    }
+
+    .left, .right {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        opacity: 1;
+        transition: opacity 0.25s;
+        .dot {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background-color: #C4C4C4;
+            border-radius: 50%;
+            z-index: 9;
+        }
+        .line {
+            width: 200px;
+            height: 2px;
+            background-image: repeating-linear-gradient(to right, #C4C4C4 0,
+            #C4C4C4 1px, rgba(255,255,255,0) 1px,
+            rgba(255,255,255,0) 2px);
+        }
+
+        .imageTimeline {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .imageDesc {
+            text-align: center;
+            h4 {
+                margin-top: 16px;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: -0.015em;
+            }
+            p {
+                margin-top: 4px;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 140%;
+                letter-spacing: -0.015em;
+            }
+        }
+        
+    }
+
+    .left, .right {
+        z-index: 9;
+        .line {
+            display: block;
+            @media (min-width: $mobile) {
+                display: none;
+            }
+            @media (min-width: $tablet-small) {
+                display: none;
+            }
+            @media (min-width: $tablet-large) {
+                display: block;
+            }
+            @media (min-width: $desktop-small) {
+                display: block;
+            }
+            @media (min-width: $desktop-large){
+                display: block;
+            }
+        }
+        .dot {
+            opacity: 1;
+            @media (min-width: $mobile) {
+                opacity: 0;
+            }
+            @media (min-width: $tablet-small) {
+                opacity: 0;
+            }
+            @media (min-width: $tablet-large) {
+                opacity: 1;
+            }
+            @media (min-width: $desktop-small) {
+                opacity: 1;
+            }
+            @media (min-width: $desktop-large){
+                opacity: 1;
+            }
+        }
+        .imageTimeline {
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .left {
+        right: 50%;
+        .dot {
+            right: -10px;
+        }
+        .imageTimeline {
+            transform: translateX(0%);
+            @media (min-width: $mobile) {
+                transform: translateX(50%);
+            }
+            @media (min-width: $tablet-small) {
+                transform: translateX(50%);
+            }
+            @media (min-width: $tablet-large) {
+                transform: translateX(0%);
+            }
+            @media (min-width: $desktop-small) {
+                transform: translateX(0%);
+            }
+            @media (min-width: $desktop-large){
+                transform: translateX(0%);
+            }
+            .imageDesc {
+                left: 20px;
+            }
+        }
+    }
+    .right {
+        left: 50%;
+        .dot {
+            left: -10px;
+        }
+        .imageTimeline {
+            transform: translateX(0%);
+            @media (min-width: $mobile) {
+                transform: translateX(-50%);
+            }
+            @media (min-width: $tablet-small) {
+                transform: translateX(-50%);
+            }
+            @media (min-width: $tablet-large) {
+                transform: translateX(0%);
+            }
+            @media (min-width: $desktop-small) {
+                transform: translateX(0%);
+            }
+            @media (min-width: $desktop-large){
+                transform: translateX(0%);
+            }
+            .imageDesc {
+                right: 20px;
+            }
+        }
+    }
+
+    .joinUs {
+        padding-bottom: 300px;
+        @media (min-width: $mobile) {
+            padding-bottom: 170px;
+        }
+        @media (min-width: $tablet-small) {
+            padding-bottom: 170px;
+        }
+        @media (min-width: $tablet-large) {
+            padding-bottom: 200px;
+        }
+        @media (min-width: $desktop-small) {
+            padding-bottom: 250px;
+        }
+        @media (min-width: $desktop-large){
+            padding-bottom: 300px;
+        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        * {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 140%;
+
+            @media (min-width: $mobile) {
+                font-size: 20px;
+            }
+            @media (min-width: $tablet-small) {
+                font-size: 30px;
+            }
+            @media (min-width: $tablet-large) {
+                font-size: 35px;
+            }
+            @media (min-width: $desktop-small) {
+                font-size: 40px;
+            }
+            @media (min-width: $desktop-large){
+                font-size: 40px;
+            }
+        }
+        button {
+            text-decoration: none;
+            color: $aerovect-blue;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background: none;
+            @media (min-width: $mobile) {
+                font-size: 28px;
+            }
+        }
+    }
+
+}

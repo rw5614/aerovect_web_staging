@@ -144,7 +144,10 @@
         @media (max-height: 700px) {
             height: 200vh;
         }
-        object-fit: cover;
+        background: url('../../assets/Careers/banner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 35%;
         
     }
 

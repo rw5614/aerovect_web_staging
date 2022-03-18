@@ -99,7 +99,7 @@ const News: React.FC<ViewProps> = ({
                             <img src={forbesImg} alt="cnbc" />
                             <div className="article">
                                 <h4>AeroVect Founders Recognized Amongst Forbes Top 30 Under 30</h4>
-                                <p>December 18, 2021</p>
+                                <p>December 1, 2021</p>
                             </div>
                             <a
                                 target="_blank"

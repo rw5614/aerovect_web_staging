@@ -92,7 +92,7 @@ const Careers: React.FC<ViewProps> = ({
                 </p>
             </header>
 
-            <ParallaxBanner
+            {/* <ParallaxBanner
                 layers={[
                     {
                         image: bannerImg,
@@ -101,7 +101,8 @@ const Careers: React.FC<ViewProps> = ({
                 ]}
                 style={{ aspectRatio: '3 / 1' }}
                 id="2"
-            />
+            /> */}
+            <img className="banner" src={bannerImg} alt="banner" id="2" />
 
             <section className="benefitsSection" id="3">
                 <Parallax

@@ -139,6 +139,15 @@
         align-items:center;
     }
 
+    .banner {
+        height: 100vh;
+        @media (max-height: 600px) {
+            height: 200vh;
+        }
+        object-fit: cover;
+        
+    }
+
     .benefitsSection {
         width: 100%;
         display: flex;

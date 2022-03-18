@@ -4,7 +4,7 @@
 
     header {
         height: 100vh;
-        @media (max-height: 600px) {
+        @media (max-height: 700px) {
             height: 200vh;
         }
         display: flex;
@@ -141,7 +141,7 @@
 
     .banner {
         height: 100vh;
-        @media (max-height: 600px) {
+        @media (max-height: 700px) {
             height: 200vh;
         }
         object-fit: cover;
@@ -158,35 +158,35 @@
         @media (min-width: $mobile) {
             height: initial;
             flex-direction: column;
-            @media (max-height: 600px) {
+            @media (max-height: 700px) {
                 height: 200vh;
             }
         }
         @media (min-width: $tablet-small) {
             height: initial;
             flex-direction: column;
-            @media (max-height: 600px) {
+            @media (max-height: 700px) {
                 height: 200vh;
             }
         }
         @media (min-width: $tablet-large) {
             height: 100vh;
             flex-direction: row;
-            @media (max-height: 600px) {
+            @media (max-height: 700px) {
                 height: 200vh;
             }
         }
         @media (min-width: $desktop-small) {
             height: 100vh;
             flex-direction: row;
-            @media (max-height: 600px) {
+            @media (max-height: 700px) {
                 height: 200vh;
             }
         }
         @media (min-width: $desktop-large){
             height: 100vh;
             flex-direction: row;
-            @media (max-height: 600px) {
+            @media (max-height: 700px) {
                 height: 200vh;
             }
         }
@@ -562,36 +562,33 @@
         @media (min-width: $mobile) {
             padding: 100px $page-padding-x-m;
             height: initial;
-            @media (max-height: 600px) {
-                height: 200vh;
-            }
         }
         @media (min-width: $tablet-small) {
             padding: 0 0;
             height: 100vh;
-            @media (max-height: 600px) {
-                height: 200vh;
+            @media (max-height: 1000px) {
+                height: 150vh;
             }
         }
         @media (min-width: $tablet-large) {
             padding: 0 0;
             height: 100vh;
-            @media (max-height: 600px) {
-                height: 200vh;
+            @media (max-height: 1000px) {
+                height: 150vh;
             }
         }
         @media (min-width: $desktop-small) {
             padding: 0 0;
             height: 100vh;
-            @media (max-height: 600px) {
-                height: 200vh;
+            @media (max-height: 1000px) {
+                height: 150vh;
             }
         }
         @media (min-width: $desktop-large){
             padding: 0 0;
             height: 100vh;
-            @media (max-height: 600px) {
-                height: 200vh;
+            @media (max-height: 1000px) {
+                height: 150vh;
             }
         }
         h1, h2 {

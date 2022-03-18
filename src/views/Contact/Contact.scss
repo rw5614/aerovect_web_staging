@@ -4,8 +4,8 @@
     header {
         padding: 0 $page-padding-x-dl;
         height: 100vh;
-        @media (max-height: 600px) {
-            height: 200vh;
+        @media (max-height: 850px) {
+            height: 150vh;
         }
         background: url('../../assets/Contact/background.jpg');
         background-size: cover;

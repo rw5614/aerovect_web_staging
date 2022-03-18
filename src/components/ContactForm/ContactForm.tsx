@@ -1,9 +1,4 @@
 import React from 'react';
-import {
-    BrowserRouter as Router, Switch, Route, Redirect,
-} from 'react-router-dom';
-import { ParallaxProvider } from 'react-scroll-parallax';
-
 import './ContactForm.scss';
 
 interface ContactFormProps {

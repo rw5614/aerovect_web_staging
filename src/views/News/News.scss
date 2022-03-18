@@ -262,7 +262,7 @@
                     margin-bottom: 0;
                 }
                 @media (min-width: $tablet-small) {
-                    margin-bottom: 40px;
+                    margin-bottom: 0;
                 }
                 @media (min-width: $tablet-large) {
                     margin-bottom: 40px;
@@ -282,7 +282,7 @@
                     flex-direction: column;
                 }
                 @media (min-width: $tablet-small) {
-                    flex-direction: row;
+                    flex-direction: column;
                 }
                 @media (min-width: $tablet-large) {
                     flex-direction: row;
@@ -302,8 +302,8 @@
                     position: relative;
                     margin: 10px;
                     .mediaKitImg {
-                        width: 350px;
-                        height: 246px;
+                        max-width: 350px;
+                        max-height: 246px;
                         object-fit: cover;
                         border-radius: 16px;
                         // width: 250px;

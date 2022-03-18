@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/aerovect_web_staging/static/css/main.b3d81b81.chunk.css",
-    "main.js": "/aerovect_web_staging/static/js/main.9b837748.chunk.js",
-    "main.js.map": "/aerovect_web_staging/static/js/main.9b837748.chunk.js.map",
+    "main.css": "/aerovect_web_staging/static/css/main.aa744ef2.chunk.css",
+    "main.js": "/aerovect_web_staging/static/js/main.97aea515.chunk.js",
+    "main.js.map": "/aerovect_web_staging/static/js/main.97aea515.chunk.js.map",
     "runtime-main.js": "/aerovect_web_staging/static/js/runtime-main.52428e38.js",
     "runtime-main.js.map": "/aerovect_web_staging/static/js/runtime-main.52428e38.js.map",
     "static/js/2.cb31948c.chunk.js": "/aerovect_web_staging/static/js/2.cb31948c.chunk.js",
     "static/js/2.cb31948c.chunk.js.map": "/aerovect_web_staging/static/js/2.cb31948c.chunk.js.map",
     "index.html": "/aerovect_web_staging/index.html",
-    "static/css/main.b3d81b81.chunk.css.map": "/aerovect_web_staging/static/css/main.b3d81b81.chunk.css.map",
+    "static/css/main.aa744ef2.chunk.css.map": "/aerovect_web_staging/static/css/main.aa744ef2.chunk.css.map",
     "static/js/2.cb31948c.chunk.js.LICENSE.txt": "/aerovect_web_staging/static/js/2.cb31948c.chunk.js.LICENSE.txt",
     "static/media/1.d5752542.jpg": "/aerovect_web_staging/static/media/1.d5752542.jpg",
     "static/media/2.01b1d672.jpg": "/aerovect_web_staging/static/media/2.01b1d672.jpg",
@@ -19,6 +19,7 @@
     "static/media/7.8838be0b.jpg": "/aerovect_web_staging/static/media/7.8838be0b.jpg",
     "static/media/8.4a5c5abe.jpg": "/aerovect_web_staging/static/media/8.4a5c5abe.jpg",
     "static/media/9.4223255d.jpg": "/aerovect_web_staging/static/media/9.4223255d.jpg",
+    "static/media/Company.scss": "/aerovect_web_staging/static/media/Company.abdeca3d.jpg",
     "static/media/Timeline_1.f4c77238.jpg": "/aerovect_web_staging/static/media/Timeline_1.f4c77238.jpg",
     "static/media/Timeline_2.67ce8eec.jpg": "/aerovect_web_staging/static/media/Timeline_2.67ce8eec.jpg",
     "static/media/Timeline_3.ec874add.jpg": "/aerovect_web_staging/static/media/Timeline_3.ec874add.jpg",
@@ -61,7 +62,7 @@
   "entrypoints": [
     "static/js/runtime-main.52428e38.js",
     "static/js/2.cb31948c.chunk.js",
-    "static/css/main.b3d81b81.chunk.css",
-    "static/js/main.9b837748.chunk.js"
+    "static/css/main.aa744ef2.chunk.css",
+    "static/js/main.97aea515.chunk.js"
   ]
 }

@@ -21,11 +21,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
             action="https://formspree.io/xknqngvk"
             method="POST"
         >
-            <input id="form_name" type="text" name="name" required placeholder="Name*" />
-            <input id="form_email" type="email" name="email" required placeholder="Email" />
+            <input id="form_name" type="text" name="name" required placeholder="Name *" />
+            <input id="form_email" type="email" name="email" required placeholder="Email *" />
             <input id="form_subject" type="text" name="subject" required placeholder="Subject" />
             <input id="form_company" type="text" name="company" required placeholder="Company" />
-            <textarea id="form_message" name="message" required placeholder="Message" />
+            <textarea id="form_message" name="message" required placeholder="Message *" />
             <div className="submitWrapper">
                 <button type="submit" name="submit" id="submit">Send Message</button>
             </div>

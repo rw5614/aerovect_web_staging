@@ -71,6 +71,12 @@ const Company: React.FC<ViewProps> = ({
             timelineDot.style.opacity = '1';
             timelineDot.style.top = `${storyHeading.getBoundingClientRect().top + 150}px`;
         }
+        if (scrolled >= (2 - (300 / window.innerHeight))) {
+            storyHeading.style.color = 'black';
+            console.log(123);
+        } else {
+            storyHeading.style.color = 'white';
+        }
 
         if (dot1Top <= timelineDotTop) {
             timeline1.style.opacity = '0';

@@ -4,6 +4,9 @@
     header {
         padding: 0 $page-padding-x-dl;
         height: 100vh;
+        @media (max-height: 600px) {
+            height: 200vh;
+        }
         background: url('../../assets/Contact/background.jpg');
         background-size: cover;
         background-repeat: no-repeat;

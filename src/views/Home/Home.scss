@@ -467,7 +467,7 @@
             transform: scale(0.7);
             @media (min-width: $mobile) {
                 right: calc(131px * 0.3 + $page-padding-x-m);
-                transform: scale(.45);
+                transform: scale(.40);
             }
             @media (min-width: $tablet-small) {
                 right: calc(131px * 0.1 + $page-padding-x-ts);

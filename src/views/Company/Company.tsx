@@ -65,11 +65,6 @@ const Company: React.FC<ViewProps> = ({
             timelineDot.style.top = `${storyHeading.getBoundingClientRect().top + 150}px`;
             timelineLine.style.height = `${dot5Top - timelineDotTop}px`;
         }
-        if (scrolled >= (2 - (300 / window.innerHeight))) {
-            storyHeading.style.color = 'black';
-        } else {
-            storyHeading.style.color = 'white';
-        }
     };
 
     useEffect(() => {

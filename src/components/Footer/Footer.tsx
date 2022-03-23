@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
     };
 
     return (
-        <footer className="footerContainer">
+        <footer className="footerContainer" id="footer">
             <div className="footerUpper">
                 <div className="footerBlock logoBlock">
                     <img src={logoImg} alt="logo" />

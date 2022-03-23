@@ -54,13 +54,17 @@ const Home: React.FC<ViewProps> = ({
         const scrolled = winScroll / window.innerHeight;
 
         const airsideDriver = document.getElementById('airsideDriver')!;
+        const footer = document.getElementById('footer')!;
         const getInTouch = document.getElementById('getInTouch')!;
 
         const asdTop = airsideDriver.getBoundingClientRect().top;
+        const footerTop = footer.getBoundingClientRect().top;
         const gitBot = getInTouch.getBoundingClientRect().bottom;
 
-        if (asdTop <= gitBot) {
+        if (asdTop <= gitBot && footerTop > gitBot) {
             getInTouch.style.color = 'black';
+        } else if (footerTop <= gitBot) {
+            getInTouch.style.color = 'white';
         } else {
             getInTouch.style.color = 'white';
         }
@@ -78,12 +82,21 @@ const Home: React.FC<ViewProps> = ({
         if (vidModalOpen) setPlayVideo(false);
     }, [vidModalOpen]);
 
+    const [tStartScroll, setTStartScroll] = useState(0);
+    const [tEndScroll, setTEndScroll] = useState(0);
+
     const windowResized = () => {
         const getVideoHeight = () => {
             const floatingVideo = document.getElementById('floatingVideo')!;
             return floatingVideo.getBoundingClientRect().height;
         };
         setVideoHeight(getVideoHeight());
+
+        const airsideDriver = document.getElementById('airsideDriver')!;
+        const asdBox = airsideDriver.getBoundingClientRect();
+
+        setTStartScroll(asdBox.y);
+        setTEndScroll(asdBox.y + asdBox.height / 2);
         window.addEventListener('scroll', listenToScroll);
         return (() => {
             window.removeEventListener('scroll', listenToScroll);
@@ -221,9 +234,10 @@ const Home: React.FC<ViewProps> = ({
                         <img src={widthPx >= 768 ? roadAImg : roadASmallImg} alt="leftRoad" />
                         <Parallax
                             translateY={['0px', widthPx >= 768 ? '-500px' : '-250px']}
-                            className="floatingVideoContainer"
                             easing="easeOutQuad"
                             shouldAlwaysCompleteAnimation
+                            startScroll={tStartScroll}
+                            endScroll={tEndScroll}
                         >
                             <img className="tractor" src={widthPx >= 768 ? tractorImg : tractorSmallImg} alt="tractor" />
                         </Parallax>

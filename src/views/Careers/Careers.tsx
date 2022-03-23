@@ -66,10 +66,9 @@ const Careers: React.FC<ViewProps> = ({
                 <h1>Build your career at AeroVect.</h1>
                 <h2>Shape global aviation.</h2>
                 <p className="headerP">
-                    At AeroVect, we automate baggage and cargo logistics at some of the busiest
-                    passenger airports and air freight hubs in the world. Backed by top-tier
-                    investors, AeroVect is shaping the future of airport automation, beginning with
-                    self-driving tow tractors.
+                    At AeroVect, we automate logistics at some of the busiest passenger and cargo airports
+                    in the world. Backed by top-tier investors, AeroVect is shaping the future of airport automation,
+                    beginning with self-driving baggage and cargo tractors.
                     <br />
                     <br />
                     If you have a passion for applying autonomous driving
@@ -80,10 +79,9 @@ const Careers: React.FC<ViewProps> = ({
 
             <header className="mobileDesc">
                 <p>
-                    At AeroVect, we automate baggage and cargo logistics at some of the busiest
-                    passenger airports and air freight hubs in the world. Backed by top-tier
-                    investors, AeroVect is shaping the future of airport automation, beginning with
-                    self-driving tow tractors.
+                    At AeroVect, we automate logistics at some of the busiest passenger and cargo airports
+                    in the world. Backed by top-tier investors, AeroVect is shaping the future of airport automation,
+                    beginning with self-driving baggage and cargo tractors.
                     <br />
                     <br />
                     If you have a passion for applying autonomous driving

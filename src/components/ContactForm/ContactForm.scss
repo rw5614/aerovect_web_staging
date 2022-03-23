@@ -41,6 +41,10 @@
         font-weight: 500;
         font-size: 16px;
     }
+    textarea {
+        max-width: 100%;
+        min-height: 35px;
+    }
     .submitWrapper {
         position: relative;
         button {

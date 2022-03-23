@@ -1,12 +1,18 @@
 /* eslint-disable jsx-a11y/media-has-caption */
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, {
+    useEffect, useLayoutEffect, useRef, useState,
+} from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { Parallax, useParallaxController } from 'react-scroll-parallax';
+// @ts-ignore
+import ModalVideo from 'react-modal-video';
 import { HeaderColorData, ViewProps } from '../../App';
 import roadAImg from '../../assets/Home/roadA.svg';
+import roadASmallImg from '../../assets/Home/roadASmall.svg';
 import roadBImg from '../../assets/Home/roadB.svg';
+import roadBSmallImg from '../../assets/Home/roadBSmall.svg';
 import tractorImg from '../../assets/Home/tractor.svg';
-import videoImg from '../../assets/Home/video.jpg';
+import tractorSmallImg from '../../assets/Home/tractorSmall.svg';
 
 // @ts-ignore
 import video from '../../assets/Home/video.mp4';
@@ -21,20 +27,73 @@ const Home: React.FC<ViewProps> = ({
     const parallaxController = useParallaxController();
 
     const screenHeight = window.innerHeight;
-    const handleLoad = () => parallaxController?.update();
 
     const [videoHeight, setVideoHeight] = useState(0);
+
+    const [playVideo, setPlayVideo] = useState(false);
+    const [vidModalOpen, setVidModalOpen] = useState(false);
+
+    const ourMissionH2Ref = useRef<any>(null);
+    const ourMissionPRef = useRef<any>(null);
+    const ourMissionBtnRef = useRef<any>(null);
+
+    const airsideDriverRef = useRef<any>(null);
 
     const navigate = (path: string) => {
         history.push(`/${path}`);
     };
 
+    const enterAnimation = (ref: React.MutableRefObject<any>) => {
+        ref.current.classList.add('slideIn');
+    };
+
+    const listenToScroll = () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+        // TODO: Get Screen height (dynamic), also do onResize;
+        const scrolled = winScroll / window.innerHeight;
+
+        const airsideDriver = document.getElementById('airsideDriver')!;
+        const getInTouch = document.getElementById('getInTouch')!;
+
+        const asdTop = airsideDriver.getBoundingClientRect().top;
+        const gitBot = getInTouch.getBoundingClientRect().bottom;
+
+        if (asdTop <= gitBot) {
+            getInTouch.style.color = 'black';
+        } else {
+            getInTouch.style.color = 'white';
+        }
+    };
+
+    useLayoutEffect(() => {
+        const vid = document.getElementById('floatingVideo')!;
+        // @ts-ignore
+        if (playVideo) vid.play();
+        // @ts-ignore
+        else vid.pause();
+    }, [playVideo]);
+
     useEffect(() => {
+        if (vidModalOpen) setPlayVideo(false);
+    }, [vidModalOpen]);
+
+    const windowResized = () => {
         const getVideoHeight = () => {
             const floatingVideo = document.getElementById('floatingVideo')!;
             return floatingVideo.getBoundingClientRect().height;
         };
         setVideoHeight(getVideoHeight());
+        window.addEventListener('scroll', listenToScroll);
+        return (() => {
+            window.removeEventListener('scroll', listenToScroll);
+        });
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', windowResized);
+        windowResized();
+        return (() => window.removeEventListener('resize', windowResized));
     }, []);
 
     useLayoutEffect(() => {
@@ -69,10 +128,16 @@ const Home: React.FC<ViewProps> = ({
         changeColorData(colorData);
     }, [location]);
 
+    const [widthPx, setWidthPx] = useState(0);
+    useLayoutEffect(() => {
+        setWidthPx(window.innerWidth);
+    });
+
     return (
         <div className="homeContainer">
+            <ModalVideo channel="youtube" autoplay isOpen={vidModalOpen} videoId="Rlv2mXYjLYo" onClose={() => setVidModalOpen(false)} />
             {/* Home */}
-            <div className="getInTouch">
+            <div className="getInTouch" id="getInTouch">
                 <p>&#8592; Get in touch</p>
             </div>
             <section className="heroContainer" id="heroContainer">
@@ -89,64 +154,81 @@ const Home: React.FC<ViewProps> = ({
             </section>
 
             <section className="ourMission" id="ourMission">
-                <Parallax
-                    translateY={[0, -50]}
-                    opacity={[1, 0]}
+                <div
                     className="ourMissionText"
-                    startScroll={screenHeight}
-                    endScroll={screenHeight * 1.5}
                 >
-                    <h2>Our mission</h2>
-                    <p>
-                        We started AeroVect to make ground handling dramatically safer,
-                        more productive, and more sustainable. We do that with the AeroVect
-                        Driver, the industry&apos;s most advanced OEM agnostic self-driving
-                        software for GSE.
-                    </p>
-                    <button type="button" onClick={() => navigate('technology')}>Discover &gt;</button>
-                </Parallax>
+                    <Parallax
+                        onEnter={() => enterAnimation(ourMissionH2Ref)}
+                    >
+                        <h2 ref={ourMissionH2Ref}>Our mission</h2>
+                    </Parallax>
+                    <Parallax
+                        onEnter={() => enterAnimation(ourMissionPRef)}
+                    >
+                        <p ref={ourMissionPRef}>
+                            We started AeroVect to make ground handling dramatically safer,
+                            more productive, and more sustainable. We do that with the AeroVect
+                            Driver, the industry&apos;s most advanced OEM agnostic self-driving
+                            software for GSE.
+                        </p>
+                    </Parallax>
+                    <Parallax
+                        onEnter={() => enterAnimation(ourMissionBtnRef)}
+                    >
+                        <button ref={ourMissionBtnRef} type="button" onClick={() => navigate('technology')}>Discover &gt;</button>
+                    </Parallax>
+                </div>
                 <Parallax
                     translateY={['0px', `-${videoHeight / 2}px`]}
                     className="floatingVideoContainer"
                     startScroll={screenHeight}
                     endScroll={screenHeight * 1.5}
+                    style={{ bottom: `${-videoHeight}px` }}
+                    onEnter={() => setPlayVideo(false)}
+                    onExit={() => setPlayVideo(true)}
                 >
                     {/* <img id="floatingVideo" className="floatingVideo" src={videoImg} alt="video" onLoad={handleLoad} /> */}
-                    <video id="floatingVideo" className="floatingVideo" playsInline autoPlay muted loop>
+                    <video id="floatingVideo" className="floatingVideo" playsInline autoPlay muted loop onClick={() => setVidModalOpen(true)}>
                         <source src={video} type="video/mp4" />
                     </video>
                 </Parallax>
             </section>
 
-            <section className="airsideDriver" id="airsideDriver">
+            <section className="airsideDriver" id="airsideDriver" style={{ marginTop: `${videoHeight}px` }}>
                 <div className="airsideDescription">
-                    <h2>
-                        World&#8217;s most experienced
-                        <br />
-                        airside driver.
-                    </h2>
-                    <h3>
-                        Meet the AeroVect Driver
-                    </h3>
-                    <p>
-                        The premier self-driving technology for GSE.
-                        Aviation-only, OEM agnostic, highly scalable.
-                    </p>
-                    <button type="button" onClick={() => navigate('technology')}>Learn more</button>
+                    <Parallax
+                        onEnter={() => enterAnimation(airsideDriverRef)}
+                    >
+                        <div ref={airsideDriverRef}>
+                            <h2>
+                                World&#8217;s most experienced
+                                <br />
+                                airside driver.
+                            </h2>
+                            <h3>
+                                Meet the AeroVect Driver
+                            </h3>
+                            <p>
+                                The premier self-driving technology for GSE.
+                                Aviation-only, OEM agnostic, highly scalable.
+                            </p>
+                            <button type="button" onClick={() => navigate('technology')}>Learn more</button>
+                        </div>
+                    </Parallax>
                 </div>
                 <div className="road">
                     <div className="roadLeft">
-                        <img src={roadAImg} alt="leftRoad" />
+                        <img src={widthPx >= 768 ? roadAImg : roadASmallImg} alt="leftRoad" />
                         <Parallax
-                            translateY={['0px', '-500px']}
+                            translateY={['0px', widthPx >= 768 ? '-500px' : '-250px']}
                             className="floatingVideoContainer"
-                            easing="easeOutQuint"
+                            easing="easeOutQuad"
                             shouldAlwaysCompleteAnimation
                         >
-                            <img className="tractor" src={tractorImg} alt="tractor" />
+                            <img className="tractor" src={widthPx >= 768 ? tractorImg : tractorSmallImg} alt="tractor" />
                         </Parallax>
                     </div>
-                    <img className="rightRoad" src={roadBImg} alt="rightRoad" />
+                    <img className="rightRoad" src={widthPx >= 768 ? roadBImg : roadBSmallImg} alt="rightRoad" />
                 </div>
             </section>
         </div>

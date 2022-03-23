@@ -8,7 +8,7 @@ import { saveAs } from 'file-saver';
 
 import './News.scss';
 
-import bannerImg from '../../assets/News/banner.jpg';
+import bannerImg from '../../assets/News/banner.png';
 import cnbcImg from '../../assets/News/cnbc.svg';
 import iataImg from '../../assets/News/iata.png';
 import forbesImg from '../../assets/News/forbes.png';

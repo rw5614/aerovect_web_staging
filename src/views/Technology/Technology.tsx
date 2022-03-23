@@ -1,5 +1,10 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+/* eslint-disable jsx-a11y/heading-has-content */
+import React, {
+    useEffect, useLayoutEffect, useRef, useState,
+} from 'react';
 import { Parallax, useParallaxController } from 'react-scroll-parallax';
+import CountUp, { useCountUp } from 'react-countup';
+// import VisibilitySensor from 'react-visibility-sensor';
 
 import './Technology.scss';
 
@@ -11,6 +16,9 @@ import image3Img from '../../assets/Technology/image3.png';
 import image4Img from '../../assets/Technology/image4.png';
 import { HeaderColorData, ViewProps } from '../../App';
 
+// @ts-ignore
+import backgroundVideo from '../../assets/Technology/background.mp4';
+
 const Technology: React.FC<ViewProps> = ({
     changeColorData,
 }) => {
@@ -19,6 +27,15 @@ const Technology: React.FC<ViewProps> = ({
     const handleLoad = () => parallaxController?.update();
 
     const screenHeight = window.innerHeight;
+
+    const row1Ref = useRef<any>(null);
+    const row2Ref = useRef<any>(null);
+    const row3Ref = useRef<any>(null);
+    const row4Ref = useRef<any>(null);
+
+    const enterAnimation = (ref: React.MutableRefObject<any>) => {
+        ref.current.classList.add('slideIn');
+    };
 
     const listenToScroll = () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -57,6 +74,47 @@ const Technology: React.FC<ViewProps> = ({
 
             // Explore More Position
             exploreMore.style.top = '200vh';
+        }
+    };
+
+    const degCU = useCountUp({
+        start: 0,
+        end: 360,
+        duration: 0.5,
+        ref: 'degree',
+    });
+
+    const senCU = useCountUp({
+        start: 0,
+        end: 10,
+        duration: 0.5,
+        ref: 'sensors',
+    });
+
+    const lidCU = useCountUp({
+        start: 0,
+        end: 1.2,
+        duration: 0.5,
+        ref: 'lidar',
+        suffix: 'M',
+    });
+
+    const sysCU = useCountUp({
+        start: 0,
+        end: 5,
+        duration: 0.5,
+        ref: 'systems',
+    });
+
+    const [cuOnce, setCuOnce] = useState(false);
+
+    const startCU = () => {
+        if (!cuOnce) {
+            degCU.start();
+            senCU.start();
+            lidCU.start();
+            sysCU.start();
+            setCuOnce(true);
         }
     };
 
@@ -114,6 +172,9 @@ const Technology: React.FC<ViewProps> = ({
             </header>
 
             <section className="background" id="background">
+                <video playsInline autoPlay muted loop>
+                    <source src={backgroundVideo} type="video/mp4" />
+                </video>
                 <h1>
                     World&#8217;s most experienced airside driver.
                 </h1>
@@ -144,22 +205,23 @@ const Technology: React.FC<ViewProps> = ({
                     opacity={[0, 1]}
                     startScroll={screenHeight * 2.5}
                     endScroll={screenHeight * 3}
+                    onEnter={startCU}
                 >
                     <div className="dataContainer">
                         <div className="dataPoint">
-                            <h3>360</h3>
+                            <h3 id="degree" />
                             <p>Degree Awareness</p>
                         </div>
                         <div className="dataPoint">
-                            <h3>10</h3>
+                            <h3 id="sensors" />
                             <p>Robust Sensors</p>
                         </div>
                         <div className="dataPoint">
-                            <h3>1.2M</h3>
+                            <h3 id="lidar" />
                             <p>LiDAR Points Per Second</p>
                         </div>
                         <div className="dataPoint">
-                            <h3>5</h3>
+                            <h3 id="systems" />
                             <p>Redundant Systems</p>
                         </div>
                     </div>
@@ -167,59 +229,67 @@ const Technology: React.FC<ViewProps> = ({
             </section>
 
             <section className="imageCards">
-                <div className="imageRow">
-                    <div className="imageDesc">
-                        <h4>Aviation First</h4>
-                        <p>
-                            Built Specifically and exclusively for the airside. The AeroVect Driver is
-                            trained to recognize aircraft, GSE, and markings unique to the airport
-                            environment, precisely navigating airside traffic rules.
-                        </p>
+                <Parallax onEnter={() => enterAnimation(row1Ref)}>
+                    <div className="imageRow" ref={row1Ref}>
+                        <div className="imageDesc">
+                            <h4>Aviation First</h4>
+                            <p>
+                                Built Specifically and exclusively for the airside. The AeroVect Driver is
+                                trained to recognize aircraft, GSE, and markings unique to the airport
+                                environment, precisely navigating airside traffic rules.
+                            </p>
+                        </div>
+                        <div className="image">
+                            <img src={image1Img} alt="image1" />
+                        </div>
                     </div>
-                    <div className="image">
-                        <img src={image1Img} alt="image1" />
+                </Parallax>
+                <Parallax onEnter={() => enterAnimation(row2Ref)}>
+                    <div className="imageRow" ref={row2Ref}>
+                        <div className="image">
+                            <img src={image2Img} alt="image1" />
+                        </div>
+                        <div className="imageDesc">
+                            <h4>Fully Extensible</h4>
+                            <p>
+                                Easily expand autonomy across stations. The AeroVect Driver is designed with
+                                scalability in mind to support the transition from mixed human / autonomy
+                                environments of today to the fully autonomous airside of tomorrow.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className="imageRow">
-                    <div className="image">
-                        <img src={image2Img} alt="image1" />
-                    </div>
-                    <div className="imageDesc">
-                        <h4>Fully Extensible</h4>
-                        <p>
-                            Easily expand autonomy across stations. The AeroVect Driver is designed with
-                            scalability in mind to support the transition from mixed human / autonomy
-                            environments of today to the fully autonomous airside of tomorrow.
-                        </p>
-                    </div>
-                </div>
+                </Parallax>
                 <div className="banner banner1" />
-                <div className="imageRow">
-                    <div className="imageDesc">
-                        <h4>Platform Agnostic</h4>
-                        <p>
-                            Integrate seamlessly with existing mixed fleets. The AeroVect Driver is
-                            broadly compatible with GSE from all leading OEMs, delivering operational
-                            certainty through reliable and predictable driverless operations.
-                        </p>
+                <Parallax onEnter={() => enterAnimation(row3Ref)}>
+                    <div className="imageRow" ref={row3Ref}>
+                        <div className="imageDesc">
+                            <h4>Platform Agnostic</h4>
+                            <p>
+                                Integrate seamlessly with existing mixed fleets. The AeroVect Driver is
+                                broadly compatible with GSE from all leading OEMs, delivering operational
+                                certainty through reliable and predictable driverless operations.
+                            </p>
+                        </div>
+                        <div className="image">
+                            <img src={image3Img} alt="image1" />
+                        </div>
                     </div>
-                    <div className="image">
-                        <img src={image3Img} alt="image1" />
+                </Parallax>
+                <Parallax onEnter={() => enterAnimation(row4Ref)}>
+                    <div className="imageRow" ref={row4Ref}>
+                        <div className="image">
+                            <img src={image4Img} alt="image1" />
+                        </div>
+                        <div className="imageDesc">
+                            <h4>Aviation First</h4>
+                            <p>
+                                Built Specifically and exclusively for the airside. The AeroVect Driver is
+                                trained to recognize aircraft, GSE, and markings unique to the airport
+                                environment, precisely navigating airside traffic rules.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className="imageRow">
-                    <div className="image">
-                        <img src={image4Img} alt="image1" />
-                    </div>
-                    <div className="imageDesc">
-                        <h4>Aviation First</h4>
-                        <p>
-                            Built Specifically and exclusively for the airside. The AeroVect Driver is
-                            trained to recognize aircraft, GSE, and markings unique to the airport
-                            environment, precisely navigating airside traffic rules.
-                        </p>
-                    </div>
-                </div>
+                </Parallax>
                 <div className="banner banner2" />
             </section>
 
@@ -248,16 +318,6 @@ const Technology: React.FC<ViewProps> = ({
                         translateY={['0px', '0px']}
                         opacity={[0.5, 1]}
                     >
-                        {/* <div className="banner"> */}
-                        {/* <Parallax
-                        translateX={['100px', '0px']}
-                        opacity={[0, 1]}
-                        startScroll={screenHeight * 5}
-                        endScroll={screenHeight * 5.25}
-                    >
-                        <img src={bannerImg} alt="banner" />
-                    </Parallax> */}
-                        {/* <img className="globe" src={globeImg} alt="globe" /> */}
                         <p>
                             We built the world&rsquo;s
                             {' '}
@@ -269,19 +329,11 @@ const Technology: React.FC<ViewProps> = ({
                             <b>less than 2 hours</b>
                             .
                         </p>
-                        {/* </div> */}
                     </Parallax>
                 </header>
-                <Parallax
-                    translateY={['0px', '0px']}
-                    opacity={[0, 1]}
-                    shouldAlwaysCompleteAnimation
-                // Start scroll header is at top
-                >
-                    <h3 className="last">
-                        Oh, and we have already mapped half of America&apos;s top 10 airports.
-                    </h3>
-                </Parallax>
+                <h3 className="last">
+                    Oh, and we have already mapped half of America&apos;s top 10 airports.
+                </h3>
             </section>
         </div>
     );

@@ -63,11 +63,16 @@
     }
     .background {
         z-index: 2;
-        background-image: url('../../assets/Technology/background.jpg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50%;
         color: white;
+        video {
+            height: 100%;
+            left: 0;
+            width: 100%;
+            top: 0;
+            position: absolute;
+            object-fit: cover;
+            z-index: -1;
+        }
     }
     .exploreMore {
         justify-content: center;

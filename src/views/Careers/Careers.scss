@@ -144,6 +144,21 @@
         @media (max-height: 700px) {
             height: 200vh;
         }
+        @media (min-width: $mobile) {
+            height: 50vh;
+        }
+        @media (min-width: $tablet-small) {
+            height: 100vh;
+        }
+        @media (min-width: $tablet-large) {
+            height: 100vh;
+        }
+        @media (min-width: $desktop-small) {
+            height: 100vh;
+        }
+        @media (min-width: $desktop-large){
+            height: 100vh;
+        }
         background: url('../../assets/Careers/banner.jpg');
         background-size: cover;
         background-repeat: no-repeat;

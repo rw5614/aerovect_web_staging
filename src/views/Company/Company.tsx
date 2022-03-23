@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
+import { Parallax } from 'react-scroll-parallax';
 import { HeaderColorData, ViewProps } from '../../App';
 import timeline1Img from '../../assets/Company/Timeline_1.jpg';
 import timeline2Img from '../../assets/Company/Timeline_2.jpg';
@@ -14,6 +15,16 @@ const Company: React.FC<ViewProps> = ({
     const history = useHistory();
     const navigate = (path: string) => {
         history.push(`/${path}`);
+    };
+
+    const timeline1Ref = useRef<any>(null);
+    const timeline2Ref = useRef<any>(null);
+    const timeline3Ref = useRef<any>(null);
+    const timeline4Ref = useRef<any>(null);
+    const timeline5Ref = useRef<any>(null);
+
+    const enterAnimation = (ref: React.MutableRefObject<any>) => {
+        ref.current.classList.add('slideIn');
     };
 
     const listenToScroll = () => {
@@ -31,25 +42,7 @@ const Company: React.FC<ViewProps> = ({
 
         const timelineLine = document.getElementById('timelineLine')!;
 
-        const dot1Top = document.getElementById('dot1')!.getBoundingClientRect().top;
-        const dot2Top = document.getElementById('dot2')!.getBoundingClientRect().top;
-        const dot3Top = document.getElementById('dot3')!.getBoundingClientRect().top;
-        const dot4Top = document.getElementById('dot4')!.getBoundingClientRect().top;
         const dot5Top = document.getElementById('dot5')!.getBoundingClientRect().top;
-
-        const timeline1 = document.getElementById('timeline1')!;
-        const timeline2 = document.getElementById('timeline2')!;
-        const timeline3 = document.getElementById('timeline3')!;
-        const timeline4 = document.getElementById('timeline4')!;
-        const timeline5 = document.getElementById('timeline5')!;
-
-        if (scrolled >= (1 + (300 / window.innerHeight))) {
-            storyHeading.style.position = 'fixed';
-            storyHeading.style.top = '150px';
-        } else {
-            storyHeading.style.position = 'relative';
-            storyHeading.style.top = 'initial';
-        }
 
         if (scrolled < 1) {
             // Full Screen Positions
@@ -70,45 +63,12 @@ const Company: React.FC<ViewProps> = ({
             intro.style.top = '100vh';
             timelineDot.style.opacity = '1';
             timelineDot.style.top = `${storyHeading.getBoundingClientRect().top + 150}px`;
+            timelineLine.style.height = `${dot5Top - timelineDotTop}px`;
         }
         if (scrolled >= (2 - (300 / window.innerHeight))) {
             storyHeading.style.color = 'black';
         } else {
             storyHeading.style.color = 'white';
-        }
-
-        if (dot1Top <= timelineDotTop) {
-            timeline1.style.opacity = '0';
-        } else {
-            timeline1.style.opacity = '1';
-        }
-
-        if (dot2Top <= timelineDotTop) {
-            timeline2.style.opacity = '0';
-        } else {
-            timeline2.style.opacity = '1';
-        }
-        if (dot3Top <= timelineDotTop) {
-            timeline3.style.opacity = '0';
-        } else {
-            timeline3.style.opacity = '1';
-        }
-        if (dot4Top <= timelineDotTop) {
-            timeline4.style.opacity = '0';
-            timelineLine.style.height = `${dot5Top - timelineDotTop}px`;
-        } else {
-            timeline4.style.opacity = '1';
-        }
-        if (dot5Top <= timelineDotTop) {
-            timeline5.style.opacity = '0';
-            timelineLine.style.height = '0';
-
-            storyHeading.style.opacity = '0';
-            timelineDot.style.opacity = '0';
-        } else {
-            timeline5.style.opacity = '1';
-
-            storyHeading.style.opacity = '1';
         }
     };
 
@@ -165,97 +125,107 @@ const Company: React.FC<ViewProps> = ({
             <div className="fullScreen" id="1" />
             <div className="fullScreen" id="2" />
 
-            <div className="fullScreen">
-                <div className="right" id="timeline1">
-                    <div className="dot" id="dot1" />
-                    <div className="line" />
-                    <div className="imageTimeline">
-                        <img src={timeline1Img} alt="img" />
-                        <div className="imageDesc">
-                            <h4>June 2020</h4>
-                            <p>
-                                Raymond and Eugenio start AeroVect in a garage in
-                                <br />
-                                Sunnyvale right after graduating from Harvard
-                            </p>
+            <Parallax className="timelineParallax" onEnter={() => enterAnimation(timeline1Ref)}>
+                <div className="halfScreen" ref={timeline1Ref}>
+                    <div className="right" id="timeline1">
+                        <div className="dot" id="dot1" />
+                        <div className="line" />
+                        <div className="imageTimeline">
+                            <img src={timeline1Img} alt="img" />
+                            <div className="imageDesc">
+                                <h4>June 2020</h4>
+                                <p>
+                                    Raymond and Eugenio start AeroVect in a garage in
+                                    <br />
+                                    Sunnyvale right after graduating from Harvard
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Parallax>
 
-            <div className="fullScreen">
-                <div className="left" id="timeline2">
-                    <div className="imageTimeline">
-                        <img src={timeline2Img} alt="img" />
-                        <div className="imageDesc">
-                            <h4>September 2020</h4>
-                            <p>
-                                First demo at regional airport, just 3 months
-                                <br />
-                                after starting the company
-                            </p>
+            <Parallax className="timelineParallax" onEnter={() => enterAnimation(timeline2Ref)}>
+                <div className="halfScreen" ref={timeline2Ref}>
+                    <div className="left" id="timeline2">
+                        <div className="imageTimeline">
+                            <img src={timeline2Img} alt="img" />
+                            <div className="imageDesc">
+                                <h4>September 2020</h4>
+                                <p>
+                                    First demo at regional airport, just 3 months
+                                    <br />
+                                    after starting the company
+                                </p>
+                            </div>
                         </div>
+                        <div className="line" />
+                        <div className="dot" id="dot2" />
                     </div>
-                    <div className="line" />
-                    <div className="dot" id="dot2" />
                 </div>
-            </div>
+            </Parallax>
 
-            <div className="fullScreen">
-                <div className="right" id="timeline3">
-                    <div className="dot" id="dot3" />
-                    <div className="line" />
-                    <div className="imageTimeline">
-                        <img src={timeline3Img} alt="img" />
-                        <div className="imageDesc">
-                            <h4>October 2021</h4>
-                            <p>
-                                Showcased AeroVect&apos;s OEM-agnostic retrofit technology
-                                <br />
-                                at the GSE industry&apos;s premier annual event in Las Vegas
-                            </p>
+            <Parallax className="timelineParallax" onEnter={() => enterAnimation(timeline3Ref)}>
+                <div className="halfScreen" ref={timeline3Ref}>
+                    <div className="right" id="timeline3">
+                        <div className="dot" id="dot3" />
+                        <div className="line" />
+                        <div className="imageTimeline">
+                            <img src={timeline3Img} alt="img" />
+                            <div className="imageDesc">
+                                <h4>October 2021</h4>
+                                <p>
+                                    Showcased AeroVect&apos;s OEM-agnostic retrofit technology
+                                    <br />
+                                    at the GSE industry&apos;s premier annual event in Las Vegas
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Parallax>
 
-            <div className="fullScreen">
-                <div className="left" id="timeline4">
-                    <div className="imageTimeline">
-                        <img src={timeline4Img} alt="img" />
-                        <div className="imageDesc">
-                            <h4>Fall 2021</h4>
-                            <p>
-                                Built digital twins of the world&apos;s largest airports using
-                                <br />
-                                our proprietary mapping technology
-                            </p>
+            <Parallax className="timelineParallax" onEnter={() => enterAnimation(timeline4Ref)}>
+                <div className="halfScreen" ref={timeline4Ref}>
+                    <div className="left" id="timeline4">
+                        <div className="imageTimeline">
+                            <img src={timeline4Img} alt="img" />
+                            <div className="imageDesc">
+                                <h4>Fall 2021</h4>
+                                <p>
+                                    Built digital twins of the world&apos;s largest airports using
+                                    <br />
+                                    our proprietary mapping technology
+                                </p>
+                            </div>
                         </div>
+                        <div className="line" />
+                        <div className="dot" id="dot4" />
                     </div>
-                    <div className="line" />
-                    <div className="dot" id="dot4" />
                 </div>
-            </div>
+            </Parallax>
 
-            <div className="fullScreen">
-                <div className="right" id="timeline5">
-                    <div className="dot" id="dot5" />
-                    <div className="line" />
-                    <div className="imageTimeline">
-                        <img src={timeline5Img} alt="img" />
-                        <div className="imageDesc">
-                            <h4>2022</h4>
-                            <p>
-                                Deployment - Stay tuned!
-                            </p>
+            <Parallax className="timelineParallax" onEnter={() => enterAnimation(timeline5Ref)}>
+                <div className="halfScreen" ref={timeline5Ref}>
+                    <div className="right" id="timeline5">
+                        <div className="dot" id="dot5" />
+                        <div className="line" />
+                        <div className="imageTimeline">
+                            <img src={timeline5Img} alt="img" />
+                            <div className="imageDesc">
+                                <h4>2022</h4>
+                                <p>
+                                    Deployment - Stay tuned!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </Parallax>
 
             <div className="joinUs">
                 <h3>
-                    Think you are a good fit for the team?
+                    We&apos;re taking off. Hop onboard -
                     <br />
                     <button type="button" onClick={() => navigate('careers')}>Join us.</button>
                 </h3>

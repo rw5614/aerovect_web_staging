@@ -2,6 +2,9 @@
 
 .headerContainer{
     height: 120px;
+    @media (max-width: $tablet-small) {
+        height: 80px;
+    }
     width: 100vw;
     position: fixed;
     top: -120px;
@@ -10,7 +13,6 @@
     align-items: center;
     // animation: headerFadeIn 0.5s forwards;
     // animation-delay: 3.25s;
-    background: rgba(0, 0, 0, 0.1);
     transition: all 0.25s;
     .desktopHeader {
         display: flex;
@@ -144,6 +146,8 @@
 }
 
 .hasColor {
+    background: rgba(232, 232, 232, 0.6);
+    backdrop-filter: blur(16px);
     .desktopHeader {
         nav {
             button {
@@ -164,6 +168,8 @@
 }
 
 .noColor {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(16px);
     .hamburger-react {
         z-index: 999;
         div {

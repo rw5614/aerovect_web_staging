@@ -1,4 +1,5 @@
 @import '../../global.scss';
+@import 'node_modules/react-modal-video/scss/modal-video.scss';
 
 .homeContainer {
     width: 100%;
@@ -9,13 +10,17 @@
     flex-direction: column;
     justify-content: center;
 
+    .modal-video-movie-wrap iframe{
+        display: block !important;
+    }
+
     .getInTouch {
         position: fixed;
         left: -100px;
         top: 50%;
         transform: translateY(-50%);
         transform: rotate(-90deg);
-        z-index: 1;
+        z-index: 3;
         animation: getInTouchFade 1s forwards;
         animation-delay: 4s;
         p {
@@ -25,12 +30,13 @@
             font-size: 16px;
         }
         display: block;
-        @media (min-width: $mobile) {
+        @media (max-width: $tablet-small) {
             display: none;
         }
     }
     .heroContainer {
         height: 100vh;
+        z-index: 1;
         background-image: url('../../assets/Home/hero.jpg');
         background-repeat: no-repeat;
         background-size: cover;
@@ -181,6 +187,7 @@
         .ourMissionText {
             width: 100%;
             h2 {
+                opacity: 0;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 64px;
@@ -232,64 +239,82 @@
         }
         .floatingVideoContainer {
             position: absolute;
-            bottom: calc(-658px);
+            width: 100%;
+            // bottom: 50%;
+            // bottom: calc(-658px);
             z-index: 8;
+            padding: 0 $page-padding-x-dl;
             @media (min-width: $mobile) {
-                bottom: calc(-235px);
+                padding: 0 $page-padding-x-m;
             }
             @media (min-width: $tablet-small) {
-                bottom: calc(-415px);
+                padding: 0 $page-padding-x-ts;
             }
             @media (min-width: $tablet-large) {
-                bottom: calc(-470px);
+                padding: 0 $page-padding-x-tl;
             }
             @media (min-width: $desktop-small) {
-                bottom: calc(-658px);
+                padding: 0 $page-padding-x-ds;
             }
             @media (min-width: $desktop-large){
-                bottom: calc(-658px);
+                padding: 0 $page-padding-x-dl;
             }
-            width: 1120px;
-            @media (min-width: $mobile) {
-                width: 400px;
-                height: 235px;
-            }
-            @media (min-width: $tablet-small) {
-                width: 700px;
-                height: 415px;
-            }
-            @media (min-width: $tablet-large) {
-                width: 800px;
-                height: 470px;
-            }
-            @media (min-width: $desktop-small) {
-                width: 1120px;
-                height: 658px;
-            }
-            @media (min-width: $desktop-large){
-                width: 1120px;
-                height: 658px;
-            }width: 1120px;
-            @media (min-width: $mobile) {
-                width: 400px;
-                height: 235px;
-            }
-            @media (min-width: $tablet-small) {
-                width: 700px;
-                height: 415px;
-            }
-            @media (min-width: $tablet-large) {
-                width: 800px;
-                height: 470px;
-            }
-            @media (min-width: $desktop-small) {
-                width: 1120px;
-                height: 658px;
-            }
-            @media (min-width: $desktop-large){
-                width: 1120px;
-                height: 658px;
-            }
+            // @media (min-width: $mobile) {
+            //     bottom: calc(-235px);
+            // }
+            // @media (min-width: $tablet-small) {
+            //     bottom: calc(-415px);
+            // }
+            // @media (min-width: $tablet-large) {
+            //     bottom: calc(-470px);
+            // }
+            // @media (min-width: $desktop-small) {
+            //     bottom: calc(-658px);
+            // }
+            // @media (min-width: $desktop-large){
+            //     bottom: calc(-658px);
+            // }
+            // width: 1120px;
+            // @media (min-width: $mobile) {
+            //     width: 400px;
+            //     height: 235px;
+            // }
+            // @media (min-width: $tablet-small) {
+            //     width: 700px;
+            //     height: 415px;
+            // }
+            // @media (min-width: $tablet-large) {
+            //     width: 800px;
+            //     height: 470px;
+            // }
+            // @media (min-width: $desktop-small) {
+            //     width: 1120px;
+            //     height: 658px;
+            // }
+            // @media (min-width: $desktop-large){
+            //     width: 1120px;
+            //     height: 658px;
+            // }width: 1120px;
+            // @media (min-width: $mobile) {
+            //     width: 400px;
+            //     height: 235px;
+            // }
+            // @media (min-width: $tablet-small) {
+            //     width: 700px;
+            //     height: 415px;
+            // }
+            // @media (min-width: $tablet-large) {
+            //     width: 800px;
+            //     height: 470px;
+            // }
+            // @media (min-width: $desktop-small) {
+            //     width: 1120px;
+            //     height: 658px;
+            // }
+            // @media (min-width: $desktop-large){
+            //     width: 1120px;
+            //     height: 658px;
+            // }
 
             .floatingVideo {
                 border-radius: 32px;
@@ -308,50 +333,24 @@
         justify-content: center;
         position: relative;
         padding: 0 $page-padding-x-dl;
-        height: calc(100vh + 350px);
-        padding-top: 350px;
-        margin-top: 0;
+        padding-top: 200px;
         @media (min-width: $mobile) {
-            height: initial;
             padding: 200px $page-padding-x-m;
-            padding-top: 300px;
-            margin-top: 0;
         }
         @media (min-width: $tablet-small) {
-            height: calc(100vh + 350px);
-            padding: 0 $page-padding-x-ts;
-            margin-top: 0;
-            @media (max-height: 850px) {
-                margin-top: 200px;
-                height: 150vh;
-            }
+            padding: 200px $page-padding-x-ts;
+        }
+        @media (min-width: 1024px) {
+            padding: 300px $page-padding-x-ts;
         }
         @media (min-width: $tablet-large) {
-            height: calc(100vh + 350px);
-            padding: 0 $page-padding-x-tl;
-            margin-top: 0;
-            @media (max-height: 850px) {
-                margin-top: 200px;
-                height: 150vh;
-            }
+            padding: 300px $page-padding-x-tl;
         }
         @media (min-width: $desktop-small) {
-            height: calc(100vh + 700px);
-            padding: 0 $page-padding-x-ds;
-            margin-top: 0;
-            @media (max-height: 850px) {
-                margin-top: 200px;
-                height: 150vh;
-            }
+            padding: 200px $page-padding-x-ds;
         }
         @media (min-width: $desktop-large){
-            height: calc(100vh + 800px);
-            padding: 0 $page-padding-x-dl;
-            margin-top: 0;
-            @media (max-height: 850px) {
-                margin-top: 200px;
-                height: 150vh;
-            }
+            padding: 200px $page-padding-x-dl;
         }
         .airsideDescription {
             z-index: 1;
@@ -425,19 +424,19 @@
                     width: 60%;
                 }
                 @media (min-width: $tablet-small) {
-                    font-size: 24px;
+                    font-size: 18px;
                     width: 60%;
                 }
                 @media (min-width: $tablet-large) {
-                    font-size: 36px;
+                    font-size: 20px;
                     width: 60%;
                 }
                 @media (min-width: $desktop-small) {
-                    font-size: 40px;
+                    font-size: 24px;
                     width: 60%;
                 }
                 @media (min-width: $desktop-large){
-                    font-size: 48px;
+                    font-size: 24px;
                     width: 60%;
                 }
             }
@@ -467,17 +466,18 @@
             transform: scale(0.7);
             @media (min-width: $mobile) {
                 right: calc(131px * 0.3 + $page-padding-x-m);
-                transform: scale(.40);
+                transform: scale(1);
+            }
+            @media (min-width: 390px) {
+                transform: scale(1);
             }
             @media (min-width: $tablet-small) {
                 right: calc(131px * 0.1 + $page-padding-x-ts);
+                transform: scale(0.5);
+            }
+            @media (min-width: 1024px) {
+                right: calc(131px * 0.1 + 100px);
                 transform: scale(0.75);
-                @media (max-height: 1000px) {
-                    transform: scale(0.75);
-                }
-                @media (max-height: 800px) {
-                    transform: scale(0.6);
-                }
             }
             @media (min-width: $tablet-large) {
                 right: calc(131px * 1 + $page-padding-x-tl);
@@ -498,7 +498,7 @@
             }
             @media (min-width: $desktop-large){
                 right: calc(131px * 0.7 + $page-padding-x-dl);
-                transform: scale(1.1);
+                transform: scale(0.8);
                 @media (max-height: 1000px) {
                     transform: scale(0.9);
                 }
@@ -516,6 +516,9 @@
             .rightRoad {
                 position: absolute;
                 right: -130px;
+                @media (max-width: $tablet-small) {
+                    right: -19px;
+                }
             }
         }
     }

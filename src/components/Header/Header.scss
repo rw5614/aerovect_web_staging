@@ -141,10 +141,6 @@
     top: 0;
 }
 
-.noBackground {
-    background: none;
-}
-
 .hasColor {
     background: rgba(232, 232, 232, 0.6);
     backdrop-filter: blur(16px);
@@ -176,4 +172,8 @@
             background: white !important;
         }
     }
+}
+
+.noBackground {
+    background: none;
 }

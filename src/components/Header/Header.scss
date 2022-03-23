@@ -175,5 +175,6 @@
 }
 
 .noBackground {
-    background: none;
+    background: none !important;
+    backdrop-filter: none !important;
 }

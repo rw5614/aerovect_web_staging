@@ -7,6 +7,7 @@
         img {
             width: 100%;
             object-fit: cover;
+            filter: blur(3px) brightness(0.5);
             @media (min-width: $mobile) {
                 height: 200px;
             }

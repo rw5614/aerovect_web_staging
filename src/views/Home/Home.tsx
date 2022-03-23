@@ -68,6 +68,17 @@ const Home: React.FC<ViewProps> = ({
         } else {
             getInTouch.style.color = 'white';
         }
+
+        const ourMissionTop = ourMissionH2Ref.current.getBoundingClientRect().y;
+        if (ourMissionTop <= 60) {
+            ourMissionH2Ref.current.classList.add('slideOut');
+            ourMissionPRef.current.classList.add('slideOut');
+            ourMissionBtnRef.current.classList.add('slideOut');
+        } else {
+            ourMissionH2Ref.current.classList.remove('slideOut');
+            ourMissionPRef.current.classList.remove('slideOut');
+            ourMissionBtnRef.current.classList.remove('slideOut');
+        }
     };
 
     useLayoutEffect(() => {
@@ -95,8 +106,8 @@ const Home: React.FC<ViewProps> = ({
         const airsideDriver = document.getElementById('airsideDriver')!;
         const asdBox = airsideDriver.getBoundingClientRect();
 
-        setTStartScroll(asdBox.y);
-        setTEndScroll(asdBox.y + asdBox.height / 2);
+        setTStartScroll(asdBox.y + asdBox.height / 4);
+        setTEndScroll(asdBox.y + (asdBox.height * 3) / 4);
         window.addEventListener('scroll', listenToScroll);
         return (() => {
             window.removeEventListener('scroll', listenToScroll);

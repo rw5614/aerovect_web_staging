@@ -86,7 +86,8 @@ const Header: React.FC<HeaderProps> = ({
             className={
                 `headerContainer ${showHeader ? 'showHeader' : ''
                 } ${hasColor ? 'hasColor' : 'noColor'
-                } ${lastY === 0 ? 'noBackground' : ''}
+                } ${lastY === 0 ? 'noBackground' : ''
+                }
                 `
             }
         >

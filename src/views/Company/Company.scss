@@ -54,6 +54,7 @@
     header {
         background: url('../../assets/Company/Company.jpg');
         background-size: cover;
+        background-position: 60%;
         background-repeat: no-repeat;
         z-index: 1;
     }
@@ -88,30 +89,35 @@
         height: 50vh;
         display: flex;
         align-items: center;
-        margin: 50px 0;
+        margin: 200px 0;
         @media (min-width: $mobile) {
             height: 100vh;
+            margin: 50px 0;
         }
         @media (min-width: $tablet-small) {
             height: 50vh;
+            margin: 100px 0;
             @media (max-height: 700px) {
                 height: 75vh;
             }
         }
         @media (min-width: $tablet-large) {
             height: 50vh;
+            margin: 200px 0;
             @media (max-height: 700px) {
                 height: 75vh;
             }
         }
         @media (min-width: $desktop-small) {
             height: 50vh;
+            margin: 200px 0;
             @media (max-height: 700px) {
                 height: 75vh;
             }
         }
         @media (min-width: $desktop-large){
             height: 50vh;
+            margin: 200px 0;
             @media (max-height: 700px) {
                 height: 75vh;
             }

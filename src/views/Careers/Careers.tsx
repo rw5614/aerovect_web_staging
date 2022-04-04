@@ -190,7 +190,7 @@ const Careers: React.FC<ViewProps> = ({
                 <div className="rolesContainer">
                     <div className="role">
                         <div className="roleDesc">
-                            <h4>Infrastructure Engineer</h4>
+                            <h4>Staff Autonomy Engineer</h4>
                             <p>
                                 San Francisco, CA
                                 {' '}
@@ -203,51 +203,7 @@ const Careers: React.FC<ViewProps> = ({
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://jobs.smartrecruiters.com/AeroVect/743999798723067-infrastructure-engineer"
-                            >
-                                <p>Apply</p>
-                                <img src={applyImg} alt="apply" />
-                            </a>
-                        </div>
-                    </div>
-                    <div className="role">
-                        <div className="roleDesc">
-                            <h4>Robotics Engineer (Generalist)</h4>
-                            <p>
-                                San Francisco, CA
-                                {' '}
-                                <span className="divide">|</span>
-                                {' '}
-                                Full-time
-                            </p>
-                        </div>
-                        <div className="apply">
-                            <a
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://jobs.smartrecruiters.com/AeroVect/743999779645450-robotics-engineer-generalist-"
-                            >
-                                <p>Apply</p>
-                                <img src={applyImg} alt="apply" />
-                            </a>
-                        </div>
-                    </div>
-                    <div className="role">
-                        <div className="roleDesc">
-                            <h4>Vehicle Integration Engineer (Mechatronics)</h4>
-                            <p>
-                                San Francisco, CA
-                                {' '}
-                                <span className="divide">|</span>
-                                {' '}
-                                Full-time
-                            </p>
-                        </div>
-                        <div className="apply">
-                            <a
-                                target="_blank"
-                                rel="noreferrer"
-                                href="https://jobs.smartrecruiters.com/AeroVect/743999757612989-vehicle-integration-engineer-mechatronics-"
+                                href="https://jobs.ashbyhq.com/aerovect/8e2f8a0a-e242-451a-9789-819d49a3056c"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />
@@ -269,7 +225,7 @@ const Careers: React.FC<ViewProps> = ({
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://jobs.smartrecruiters.com/AeroVect/743999789664734-senior-planning-engineer-autonomy-"
+                                href="https://jobs.ashbyhq.com/aerovect/95ed0425-17d7-4bc5-9bf3-bac95a67c508"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />
@@ -278,7 +234,7 @@ const Careers: React.FC<ViewProps> = ({
                     </div>
                     <div className="role">
                         <div className="roleDesc">
-                            <h4>Staff Autonomy Engineer</h4>
+                            <h4>Robotics Engineer (Generalist)</h4>
                             <p>
                                 San Francisco, CA
                                 {' '}
@@ -291,7 +247,51 @@ const Careers: React.FC<ViewProps> = ({
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://jobs.smartrecruiters.com/AeroVect/743999779089120-staff-autonomy-engineer"
+                                href="https://jobs.ashbyhq.com/aerovect/d82dfaaa-72de-4c7f-9219-381a5861b25c"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
+                            <h4>Vehicle Integration Engineer - Electrical Systems</h4>
+                            <p>
+                                San Francisco, CA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/aerovect/10948b92-644c-4a1e-abf5-a6387aa8d90a"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
+                            <h4>Infrastructure Engineer</h4>
+                            <p>
+                                San Francisco, CA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/aerovect/ddd69113-24f7-4a99-b2a5-7f6208bd2c78"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />
@@ -313,7 +313,7 @@ const Careers: React.FC<ViewProps> = ({
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://jobs.smartrecruiters.com/AeroVect/743999725988642-autonomy-intern"
+                                href="https://jobs.ashbyhq.com/aerovect/f8798bfb-8ff4-437f-827b-0f7cd318a680"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />

@@ -210,7 +210,7 @@ const Company: React.FC<ViewProps> = ({
                             <div className="imageDesc">
                                 <h4>2022</h4>
                                 <p>
-                                    Deployment - Stay tuned!
+                                    Active deployments at US hubs
                                 </p>
                             </div>
                         </div>

@@ -13,6 +13,7 @@ import cnbcImg from '../../assets/News/cnbc.svg';
 import iataImg from '../../assets/News/iata.png';
 import forbesImg from '../../assets/News/forbes.png';
 import aviationProsImg from '../../assets/News/aviationPros.png';
+import airsideIntImg from '../../assets/News/AirsideInt.png';
 import readImg from '../../assets/News/read.png';
 
 import mediaKit1 from '../../assets/News/mediaKit/1.jpg';
@@ -81,6 +82,21 @@ const News: React.FC<ViewProps> = ({
                 </header>
                 {coverageActive && (
                     <div className="coverageList">
+                        <div className="coverage">
+                            <img src={airsideIntImg} alt="iata" />
+                            <div className="article">
+                                <h4>GAT to introduce autonomous airside driving technology</h4>
+                                <p>June 15, 2022</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.airsideint.com/issue-article/gat-to-introduce-autonomous-airside-driving-technology/"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
                         <div className="coverage">
                             <img src={aviationProsImg} alt="iata" />
                             <div className="article">

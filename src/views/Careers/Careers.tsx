@@ -203,7 +203,7 @@ const Careers: React.FC<ViewProps> = ({
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://jobs.ashbyhq.com/aerovect/8e2f8a0a-e242-451a-9789-819d49a3056c"
+                                href="https://jobs.ashbyhq.com/AeroVect/8e2f8a0a-e242-451a-9789-819d49a3056c"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />
@@ -212,7 +212,7 @@ const Careers: React.FC<ViewProps> = ({
                     </div>
                     <div className="role">
                         <div className="roleDesc">
-                            <h4>Senior Planning Engineer (Autonomy)</h4>
+                            <h4>Perception Lead (Autonomy Engineering)</h4>
                             <p>
                                 San Francisco, CA
                                 {' '}
@@ -225,7 +225,7 @@ const Careers: React.FC<ViewProps> = ({
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://jobs.ashbyhq.com/aerovect/95ed0425-17d7-4bc5-9bf3-bac95a67c508"
+                                href="https://jobs.ashbyhq.com/AeroVect/caa002e8-9fc5-4123-a24f-ec1fd2b35dd2"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />
@@ -234,7 +234,73 @@ const Careers: React.FC<ViewProps> = ({
                     </div>
                     <div className="role">
                         <div className="roleDesc">
-                            <h4>Robotics Engineer (Generalist)</h4>
+                            <h4>Localization Lead (Autonomy Engineering)</h4>
+                            <p>
+                                San Francisco, CA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/AeroVect/5840a42a-ee05-455f-9cd3-ab483bc3ce5d"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
+                            <h4>Planning Lead (Autonomy Engineering)</h4>
+                            <p>
+                                San Francisco, CA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/AeroVect/95ed0425-17d7-4bc5-9bf3-bac95a67c508"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
+                            <h4>Controls Lead (Autonomy Engineering)</h4>
+                            <p>
+                                San Francisco, CA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/AeroVect/014fa760-5499-4e6d-97aa-d5676b1fc107"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
+                            <h4>Autonomy Engineer (Generalist)</h4>
                             <p>
                                 San Francisco, CA
                                 {' '}
@@ -256,7 +322,7 @@ const Careers: React.FC<ViewProps> = ({
                     </div>
                     <div className="role">
                         <div className="roleDesc">
-                            <h4>Vehicle Integration Engineer - Electrical Systems</h4>
+                            <h4>Vehicle Integration Lead (Mechatronics)</h4>
                             <p>
                                 San Francisco, CA
                                 {' '}
@@ -322,7 +388,6 @@ const Careers: React.FC<ViewProps> = ({
                     </div>
                 </div>
             </section>
-
             <section className="contact">
                 <h1>Don&apos;t see an opening that fits?</h1>
                 <h2>Get in touch.</h2>

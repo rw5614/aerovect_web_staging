@@ -322,6 +322,28 @@ const Careers: React.FC<ViewProps> = ({
                     </div>
                     <div className="role">
                         <div className="roleDesc">
+                            <h4>Autonomy Test Engineer</h4>
+                            <p>
+                                Atlanta, GA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/AeroVect/44e04a34-7c76-48a9-a486-3a45172e9f54"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
                             <h4>Vehicle Integration Lead (Mechatronics)</h4>
                             <p>
                                 San Francisco, CA
@@ -336,6 +358,28 @@ const Careers: React.FC<ViewProps> = ({
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://jobs.ashbyhq.com/aerovect/10948b92-644c-4a1e-abf5-a6387aa8d90a"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
+                            <h4>Vehicle Integration Technician</h4>
+                            <p>
+                                Atlanta, GA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/AeroVect/d31dbe56-1a42-465c-837c-f8820c8b80b6"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />
@@ -380,6 +424,28 @@ const Careers: React.FC<ViewProps> = ({
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://jobs.ashbyhq.com/aerovect/f8798bfb-8ff4-437f-827b-0f7cd318a680"
+                            >
+                                <p>Apply</p>
+                                <img src={applyImg} alt="apply" />
+                            </a>
+                        </div>
+                    </div>
+                    <div className="role">
+                        <div className="roleDesc">
+                            <h4>Technical Recruiter</h4>
+                            <p>
+                                San Francisco, CA
+                                {' '}
+                                <span className="divide">|</span>
+                                {' '}
+                                Full-time
+                            </p>
+                        </div>
+                        <div className="apply">
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://jobs.ashbyhq.com/AeroVect/076ff359-c23f-4156-b887-af11bfc14a8a"
                             >
                                 <p>Apply</p>
                                 <img src={applyImg} alt="apply" />

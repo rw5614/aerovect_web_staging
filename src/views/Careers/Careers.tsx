@@ -324,7 +324,7 @@ const Careers: React.FC<ViewProps> = ({
                         <div className="roleDesc">
                             <h4>Autonomy Test Engineer</h4>
                             <p>
-                                Atlanta, GA
+                                San Francisco, CA
                                 {' '}
                                 <span className="divide">|</span>
                                 {' '}
@@ -434,7 +434,7 @@ const Careers: React.FC<ViewProps> = ({
                         <div className="roleDesc">
                             <h4>Technical Recruiter</h4>
                             <p>
-                                San Francisco, CA
+                                Flexible / Remote
                                 {' '}
                                 <span className="divide">|</span>
                                 {' '}

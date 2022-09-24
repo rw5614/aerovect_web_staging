@@ -184,8 +184,8 @@ const Careers: React.FC<ViewProps> = ({
                     </div>
                 </Parallax>
             </section>
-
-            <section className="rolesSection">
+            <div id="ashby_embed" />
+            {/* <section className="rolesSection">
                 <h3>Open Roles</h3>
                 <div className="rolesContainer">
                     <div className="role">
@@ -453,7 +453,7 @@ const Careers: React.FC<ViewProps> = ({
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
             <section className="contact">
                 <h1>Don&apos;t see an opening that fits?</h1>
                 <h2>Get in touch.</h2>

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 
@@ -11,9 +12,9 @@ body {
     position: relative;
 }
 
-iframe {
-    display: none;
-}
+// iframe {
+//     display: none;
+// }
 
 button {
     cursor: pointer;
@@ -27,54 +28,105 @@ button {
 }
 
 @keyframes headerFadeIn {
-    from { top: -120px; }
-    to { top: 0; }
+    from {
+        top: -120px;
+    }
+
+    to {
+        top: 0;
+    }
 }
 
 @keyframes introZoom {
-    from {mask-size: 1%;}
-    to {mask-size: 2000%;}
+    from {
+        mask-size: 1%;
+    }
+
+    to {
+        mask-size: 2000%;
+    }
 }
 
 @keyframes introExpandLine {
-    from { width: 0% }
-    to { width: 80% }
+    from {
+        width: 0%
+    }
+
+    to {
+        width: 80%
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0 }
-    to { opacity: 1 }
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
 }
 
 @keyframes slideIn {
-    from { opacity: 0; transform: translateY(100px); }
-    to { opacity: 1; transform: translateY(0) }
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
 }
+
 @keyframes slideOut {
-    from { opacity: 1; transform: translateY(0) }
-    to { opacity: 0; transform: translateY(-100px); }
+    from {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
 }
 
 .slideIn {
     animation: slideIn 1s forwards;
 }
+
 .slideOut {
     animation: slideOut 1s forwards;
 }
 
 @keyframes introHeadingFade {
-    from { bottom: -100px }
-    to { bottom: 0 }
+    from {
+        bottom: -100px
+    }
+
+    to {
+        bottom: 0
+    }
 }
 
 @keyframes introSubheadingFade {
-    from { top: -50px }
-    to { top: 0 }
+    from {
+        top: -50px
+    }
+
+    to {
+        top: 0
+    }
 }
 
 @keyframes getInTouchFade {
-    from { left: -50px }
-    to { left: 0px }
+    from {
+        left: -50px
+    }
+
+    to {
+        left: 0px
+    }
 }
 
 // Colors;
@@ -100,13 +152,12 @@ $tablet-small: 768px;
 // Mobile
 $mobile: 0px;
 
-@media (min-width: $mobile) {
-}
-@media (min-width: $tablet-small) {
-}
-@media (min-width: $tablet-large) {
-}
-@media (min-width: $desktop-small) {
-}
-@media (min-width: $desktop-large){
-}
+@media (min-width: $mobile) {}
+
+@media (min-width: $tablet-small) {}
+
+@media (min-width: $tablet-large) {}
+
+@media (min-width: $desktop-small) {}
+
+@media (min-width: $desktop-large) {}

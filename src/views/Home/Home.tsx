@@ -212,7 +212,7 @@ const Home: React.FC<ViewProps> = ({
                     onExit={() => setPlayVideo(true)}
                 >
                     {/* <img id="floatingVideo" className="floatingVideo" src={videoImg} alt="video" onLoad={handleLoad} /> */}
-                    <video id="floatingVideo" className="floatingVideo" playsInline autoPlay muted loop onClick={() => setVidModalOpen(true)}>
+                    <video id="floatingVideo" className="floatingVideo" playsInline autoPlay muted loop onClick={() => setVidModalOpen(false)}>
                         <source src={video} type="video/mp4" />
                     </video>
                 </Parallax>

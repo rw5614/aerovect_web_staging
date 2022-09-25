@@ -100,7 +100,7 @@ const Company: React.FC<ViewProps> = ({
     return (
         <div className="companyContainer">
             <header className="intro" id="intro">
-                <h1 id="storyHeading">Our Story</h1>
+                <h1 id="storyHeading"> </h1>
             </header>
             <section className="background" id="background">
                 <h1>Our Company</h1>
@@ -130,9 +130,9 @@ const Company: React.FC<ViewProps> = ({
                             <div className="imageDesc">
                                 <h4>June 2020</h4>
                                 <p>
-                                    Raymond and Eugenio start AeroVect in a garage in
+                                    Raymond and Eugenio start AeroVect in a garage
                                     <br />
-                                    Sunnyvale right after graduating from Harvard
+                                    right after graduating from Harvard
                                 </p>
                             </div>
                         </div>
@@ -210,7 +210,7 @@ const Company: React.FC<ViewProps> = ({
                             <div className="imageDesc">
                                 <h4>2022</h4>
                                 <p>
-                                    Active deployments at US hubs
+                                    Active deployments at multiple US hubs
                                 </p>
                             </div>
                         </div>

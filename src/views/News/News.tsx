@@ -15,6 +15,9 @@ import forbesImg from '../../assets/News/forbes.png';
 import aviationProsImg from '../../assets/News/aviationPros.png';
 import airsideIntImg from '../../assets/News/AirsideInt.png';
 import readImg from '../../assets/News/read.png';
+import cargofwdImg from '../../assets/News/cargofwdImg.jpeg';
+import transportLogisticsImg from '../../assets/News/transportlogisticsme.webp';
+import dnataImg from '../../assets/News/dnataImg.png';
 
 import mediaKit1 from '../../assets/News/mediaKit/1.jpg';
 import mediaKit2 from '../../assets/News/mediaKit/2.jpg';
@@ -82,6 +85,51 @@ const News: React.FC<ViewProps> = ({
                 </header>
                 {coverageActive && (
                     <div className="coverageList">
+                        <div className="coverage">
+                            <img src={dnataImg} alt="dnata" />
+                            <div className="article">
+                                <h4>AeroVect and dnata Partner to Deploy Autonomous Ground Support Equipment Worldwide</h4>
+                                <p>Sept 14, 2022</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.aviationpros.com/gse/gse-technology/press-release/21280655/aerovect-technologies-inc-aerovect-and-dnata-partner-to-deploy-autonomous-ground-support-equipment-worldwide"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
+                        <div className="coverage">
+                            <img src={cargofwdImg} alt="cargoforwarder" />
+                            <div className="article">
+                                <h4>AeroVect: The business that is driving itself</h4>
+                                <p>Sept 14, 2022</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.cargoforwarder.eu/2022/09/14/aerovect-the-business-that-is-driving-itself/"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
+                        <div className="coverage">
+                            <img src={transportLogisticsImg} alt="transportlogistics" />
+                            <div className="article">
+                                <h4>dnata Solves Labour Shortage Problem with AeroVect Automated Solutions</h4>
+                                <p>Sept 14, 2022</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.transportandlogisticsme.com/smart-air-freight/dnata-solves-labour-shortage-problem-with-aerovect-automated-solutions"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
                         <div className="coverage">
                             <img src={airsideIntImg} alt="iata" />
                             <div className="article">

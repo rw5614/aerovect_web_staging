@@ -13,11 +13,15 @@ import cnbcImg from '../../assets/News/cnbc.svg';
 import iataImg from '../../assets/News/iata.png';
 import forbesImg from '../../assets/News/forbes.png';
 import aviationProsImg from '../../assets/News/aviationPros.png';
+import gswCoverImg from '../../assets/News/gswCover.jpg';
 import airsideIntImg from '../../assets/News/AirsideInt.png';
 import readImg from '../../assets/News/read.png';
 import cargofwdImg from '../../assets/News/cargofwdImg.jpeg';
 import transportLogisticsImg from '../../assets/News/transportlogisticsme.webp';
 import dnataImg from '../../assets/News/dnataImg.png';
+import aliImg from '../../assets/News/airlogisticsint.png';
+import harvardImg from '../../assets/News/harvard.jpeg';
+import mckImg from '../../assets/News/mckinsey.png';
 
 import mediaKit1 from '../../assets/News/mediaKit/1.jpg';
 import mediaKit2 from '../../assets/News/mediaKit/2.jpg';
@@ -86,15 +90,75 @@ const News: React.FC<ViewProps> = ({
                 {coverageActive && (
                     <div className="coverageList">
                         <div className="coverage">
-                            <img src={dnataImg} alt="dnata" />
+                            <img src={gswCoverImg} alt="GSWCover" />
                             <div className="article">
-                                <h4>AeroVect and dnata Partner to Deploy Autonomous Ground Support Equipment Worldwide</h4>
-                                <p>Sept 14, 2022</p>
+                                <h4>How AeroVect is Preparing Autonomous GSE for Prime Time</h4>
+                                <p>Ground Support Worldwide: Cover Feature | January 2023 Edition</p>
                             </div>
                             <a
                                 target="_blank"
                                 rel="noreferrer"
                                 href="https://www.aviationpros.com/gse/gse-technology/press-release/21280655/aerovect-technologies-inc-aerovect-and-dnata-partner-to-deploy-autonomous-ground-support-equipment-worldwide"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
+                        <div className="coverage">
+                            <img src={harvardImg} alt="Harvard" />
+                            <div className="article">
+                                <h4>Harvard - Alumni Feature: Modernizing airports with autonomous baggage tractors</h4>
+                                <p>June 20, 2023</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://seas.harvard.edu/news/2023/06/alumni-profile-raymond-wang-ab-20?utm_content=buffer77b92&utm_medium=social&utm_source=linkedin.com&utm_campaign=buffer"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
+                        <div className="coverage">
+                            <img src={mckImg} alt="McKinsey" />
+                            <div className="article">
+                                <h4>McKinsey Webinar: Exploring Impact of Machine Vision on Aviation</h4>
+                                <p> April 26, 2023</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://acubed.airbus.com/blog/acubed/mc-kinsey-webinar-exploring-impact-of-machine-vision-on-aviation/"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
+                        <div className="coverage">
+                            <img src={aliImg} alt="airlogisticsinternational" />
+                            <div className="article">
+                                <h4>AeroVect: Dreams become a reality</h4>
+                                <p>March 3, 2023</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.airlogisticsinternational.com/content/news/aerovect-dreams-become-a-reality/"
+                            >
+                                <p>Read</p>
+                                <img src={readImg} alt="read" />
+                            </a>
+                        </div>
+                        <div className="coverage">
+                            <img src={airsideIntImg} alt="airsideInt" />
+                            <div className="article">
+                                <h4>AeroVect: A start-up success story</h4>
+                                <p>Nov 28, 2022</p>
+                            </div>
+                            <a
+                                target="_blank"
+                                rel="noreferrer"
+                                href="https://www.airsideint.com/issue-article/aerovect-a-start-up-success-story/"
                             >
                                 <p>Read</p>
                                 <img src={readImg} alt="read" />

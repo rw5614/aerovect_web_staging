@@ -168,7 +168,7 @@ const Company: React.FC<ViewProps> = ({
                         <div className="imageTimeline">
                             <img src={timeline3Img} alt="img" />
                             <div className="imageDesc">
-                                <h4>October 2021</h4>
+                                <h4>Fall 2021</h4>
                                 <p>
                                     Showcased AeroVect&apos;s OEM-agnostic retrofit technology
                                     <br />
@@ -186,7 +186,7 @@ const Company: React.FC<ViewProps> = ({
                         <div className="imageTimeline">
                             <img src={timeline4Img} alt="img" />
                             <div className="imageDesc">
-                                <h4>Fall 2021</h4>
+                                <h4>2021</h4>
                                 <p>
                                     Built digital twins of the world&apos;s largest airports using
                                     <br />
@@ -208,7 +208,7 @@ const Company: React.FC<ViewProps> = ({
                         <div className="imageTimeline">
                             <img src={timeline5Img} alt="img" />
                             <div className="imageDesc">
-                                <h4>2022</h4>
+                                <h4>2022+</h4>
                                 <p>
                                     Active deployments at multiple US hubs
                                 </p>

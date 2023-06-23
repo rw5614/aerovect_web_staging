@@ -166,13 +166,15 @@ const Home: React.FC<ViewProps> = ({
             </div>
             <section className="heroContainer" id="heroContainer">
                 <h1>
+
                     World&#8217;s most advanced
                     <br />
                     automation technology for GSE.
+
                 </h1>
                 <div className="expandLine" />
                 <h2>
-                    Highly scalable, OEM agnostic self-driving software for
+                    Highly scalable, OEM agnostic self-driving system for
                     GSE, trusted by the world&#8217;s leading airlines and handlers.
                 </h2>
             </section>
@@ -193,7 +195,7 @@ const Home: React.FC<ViewProps> = ({
                             We started AeroVect to make ground handling dramatically safer,
                             more productive, and more sustainable. We do that with the AeroVect
                             Driver, the industry&apos;s most advanced OEM agnostic self-driving
-                            software for GSE.
+                            system for GSE.
                         </p>
                     </Parallax>
                     <Parallax

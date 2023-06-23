@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                 </nav>
             </div>
             <div className="footerBottom">
-                <small>AeroVect Technologies Inc. &copy; 2020-2022</small>
+                <small>AeroVect Technologies Inc. &copy; 2020-2023</small>
                 <div className="social">
                     <a
                         target="_blank"

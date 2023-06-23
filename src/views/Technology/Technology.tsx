@@ -11,9 +11,9 @@ import './Technology.scss';
 import arrowImg from '../../assets/Technology/arrowDown.svg';
 import statsImg from '../../assets/Technology/stats.png';
 import image1Img from '../../assets/Technology/image1.png';
-import image2Img from '../../assets/Technology/image2.png';
+import image2Img from '../../assets/Technology/image2.jpg';
 import image3Img from '../../assets/Technology/image3.png';
-import image4Img from '../../assets/Technology/image4.png';
+import image4Img from '../../assets/Technology/image4.jpg';
 import { HeaderColorData, ViewProps } from '../../App';
 
 // @ts-ignore
@@ -93,7 +93,7 @@ const Technology: React.FC<ViewProps> = ({
 
     const lidCU = useCountUp({
         start: 0,
-        end: 1.2,
+        end: 7,
         duration: 0.5,
         ref: 'lidar',
         suffix: 'M',
@@ -234,7 +234,7 @@ const Technology: React.FC<ViewProps> = ({
                         <div className="imageDesc">
                             <h4>Aviation First</h4>
                             <p>
-                                Built Specifically and exclusively for the airside. The AeroVect Driver is
+                                Built specifically and exclusively for the airside. The AeroVect Driver is
                                 trained to recognize aircraft, GSE, and markings unique to the airport
                                 environment, precisely navigating airside traffic rules.
                             </p>
@@ -281,11 +281,11 @@ const Technology: React.FC<ViewProps> = ({
                             <img src={image4Img} alt="image1" />
                         </div>
                         <div className="imageDesc">
-                            <h4>Aviation First</h4>
+                            <h4>Robust + Rugged</h4>
                             <p>
-                                Built Specifically and exclusively for the airside. The AeroVect Driver is
-                                trained to recognize aircraft, GSE, and markings unique to the airport
-                                environment, precisely navigating airside traffic rules.
+                                Designed to withstand the rough ramp environment. The AeroVect Driver is
+                                built do tough standards for weatherproofness, and robustness, designed to
+                                withstand the operational realities of the airside.
                             </p>
                         </div>
                     </div>

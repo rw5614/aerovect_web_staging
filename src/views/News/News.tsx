@@ -98,7 +98,7 @@ const News: React.FC<ViewProps> = ({
                             <a
                                 target="_blank"
                                 rel="noreferrer"
-                                href="https://www.aviationpros.com/gse/gse-technology/press-release/21280655/aerovect-technologies-inc-aerovect-and-dnata-partner-to-deploy-autonomous-ground-support-equipment-worldwide"
+                                href="https://www.aviationpros.com/gse/gse-technology/article/21289185/how-aerovect-is-preparing-autonomous-gse-for-prime-time"
                             >
                                 <p>Read</p>
                                 <img src={readImg} alt="read" />
